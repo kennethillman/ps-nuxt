@@ -1,0 +1,258 @@
+//
+// PS - BUTTONS
+// 
+
+// LINK
+
+a {
+	color: var(--ps-link);
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(108%);
+	}
+
+	&:active{
+		cursor: pointer;
+		filter: brightness(92%);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+
+// BUTTON  
+// (i) -> <a>, <button>, <div> etc.
+
+.ps-btn {
+	font-family: $font-ps;
+	height: 40px;
+	display: block;
+	color: var(--ps-btn-txt);
+	background-color: var(--ps-link);
+	border: 2px solid var(--ps-link);
+	font-size: 18px;
+	line-height: 1;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1;
+	padding: 9px 24px;
+	overflow: hidden;
+	border-radius: 50px;
+	width: 100%;
+	max-width: 280px;
+	margin: 0 auto 8px;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	white-space: nowrap;
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(108%);
+	}
+
+	&:active{
+		cursor: pointer;
+		filter: brightness(92%);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+
+	svg {
+		position: absolute;
+		fill: var(--ps-btn-txt);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		height: 58%;
+		width: 58%;
+		max-width: 40px;
+	}
+
+
+	// MODE
+	// (i) -> Color acciding to mode White or Black
+
+	&.-mode {
+		.-mode-light & {
+			color: $white;
+			background-color: $black;
+			border-color: $black;
+			&.-ghost{
+				color: $black;
+				background-color: transparent;
+				border-color: $black;
+				&:hover {
+					background-color: $black;
+					color: $white;
+				}
+			}	
+		}
+		.-mode-dark & {
+			color: $black;
+			background-color: $white;
+			border-color: $white;
+			&.-ghost{
+				color: $white;
+				background-color: transparent;
+				border-color: $white;
+				&:hover {
+					background-color: $white;
+					color: $black;
+				}
+			}	
+		}
+	}
+
+
+	// SIZES
+
+	&.-small {
+		padding-top: 6px;
+		height: 32px;
+		font-size: 15px;
+		max-width: 226px;
+	}
+
+	&.-xsmall {
+		padding-top: 4px;
+		height: 26px;
+		font-size: 14px;
+		max-width: 226px;
+	}
+
+
+	// GHOST
+	// (i) -> Transparent button with borders
+	// (!!)-> Use carefully with skins, som link colors may not have contrast.
+
+	&.-ghost {
+		background-color: transparent;
+		color: var(--ps-link);
+
+		&:hover {
+			background-color: var(--ps-link);
+			color: var(--ps-btn-txt);
+		}
+
+	}
+
+	// ROUND
+	// (!!)-> Can not be combined with ghost
+
+	&.-round {
+
+		width: auto;
+		display: inline-block;
+		padding: 0;
+		width: 40px;
+
+		&.-small {
+			width: 32px;
+		}
+
+		&.-xsmall {
+			width: 26px;
+		}
+		
+	}
+
+	// SQUARE
+	// (!!)-> Can not be combined with ghost
+
+	&.-square {
+
+		width: auto;
+		display: inline-block;
+		padding: 0;
+		width: 40px;
+		border-radius: 6px;
+
+		&.-small {
+			width: 32px;
+		}
+
+		&.-xsmall {
+			width: 26px;
+		}
+		
+	}
+
+
+	// ICON (right)
+
+	&.-icon {
+
+		width: auto;
+		display: inline-block;
+		padding-right: 48px;
+
+		svg {
+			left: auto;
+			right: 11px;
+			transform: translateY(-50%);
+			height: 21px;
+			width: 21px;
+		}
+
+		&.-small {
+			padding-right: 38px;
+			svg {
+				right: 9px;
+				height: 16px;
+				width: 16px;
+			}
+			
+		}
+
+		&.-xsmall {
+			padding-right: 34px;
+			svg {
+				right: 7px;
+				height: 13px;
+				width: 13px;
+			}		
+		}
+	}
+
+
+
+	// - - - Unique versions
+
+	// TIP
+
+	&.-tip,
+	&.-code {
+		height: 30px;
+		padding:0 12px 0 12px;
+		line-height: 26px;
+		min-width: unset;
+		width: auto;
+		display: inline-block;
+		font-size: 15px;
+		color: $black;
+		background-color: $gray-200;
+		border-color: $gray-200;
+		&.-active {
+			color: var(--ps-btn-txt);
+			background-color: var(--ps-link);
+			border-color: var(--ps-link);
+		}
+	}
+
+	&.-code {
+		background-color: $white;
+		border-color: $white;
+		color: $black;
+	}
+
+
+}

@@ -1,0 +1,77 @@
+//
+// GLOBAL
+// 
+
+
+body {
+	background: var(--ps-skin-bg);
+	overflow-x: hidden;
+
+	&.-open-menu {
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+.purspot {
+	min-height: 100vh; 
+	padding-top: 70px;	
+	padding-bottom: 82px;
+	max-width: 860px;
+	margin: 0 auto;
+	overflow-x: hidden;
+
+	&.-reset {
+		min-height: 0; 
+		padding-bottom: 0;
+	}
+
+	@include VP1024 {
+		overflow: visible;
+	}
+
+	// Startpage
+	.purspot-logo {
+		width: 96px;
+		margin: 8px auto 0;
+	}
+}
+
+.ps-body {
+	position: relative;
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ps-page-startpage{
+	background: $white;
+}
+
+.startpage-top {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 36px;
+		left: 50%;
+		height: 100%;
+		width: 100vw;
+		transform: translateX(-50%);
+		background: var(--ps-skin-bg);
+		z-index: -1;
+	}
+
+}
+
+.startpage-merchants {
+
+	@include VP480 {
+		padding-bottom: 32px;
+	}
+
+}
+
+
+
+

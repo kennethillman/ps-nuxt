@@ -1,0 +1,299 @@
+//
+// PS - Hero
+// 
+
+
+.ps-hero {
+	
+	.-mode-light & {
+		background-color: rgba(0,0,0,.08);
+	}
+
+	.-mode-dark & {
+		background-color: rgba(255,255,255,.08);
+	}
+	
+
+	.hero-body {
+		padding: 0 32px; 
+		line-height: 1.356;
+		font-size: 15px;
+		p {
+			margin-bottom: 24px;
+		}
+
+		@include VP480 {
+			padding: 32px 32px 16px 32px; 
+			font-size: 18px;
+		}
+
+		@include VP1280 {
+			padding: 32px 16px 40px 16px; 
+			font-size: 20px;
+		}
+		
+	}
+
+
+
+	.hero-header {
+		font-size: 28px;
+		padding: 14px 0 18px;
+		i {
+			color: var(--ps-link);
+			font-style: inherit;
+		}
+		@include VP480 {
+			font-size: 40px;
+			padding: 14px 0px 40px;
+			max-width: 480px;
+			margin: 0 auto;
+		}
+
+		@include VP480 {
+
+			padding: 32px 0px 56px;
+
+		}
+
+		@include VP1280 {
+			font-size: 48px;
+			max-width: 580px;
+		}
+	}
+
+	.hero-info {
+
+		@include VP480 {
+			
+			max-width: 640px;
+			margin: 0 auto;
+			
+		}
+
+		@include VP600{
+			max-width: 720px;
+			padding-bottom: 36px;
+			display: flex;
+		}
+	}
+
+
+	.hero-text {
+		@include VP600 {
+			width: 45%;
+		}
+	}
+	
+
+
+
+	.hero-usp {
+
+		@include VP600 {
+			display: flex;
+			align-items: center;
+			width:55%;
+		}
+
+	}
+
+
+	// HOW
+
+
+	&.-how {
+		background: #f9f9f9;
+		position: relative;
+		padding-top: 16px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			height: 100%;
+			width: 100vw;
+			transform: translateX(-50%);
+			background: #f9f9f9;
+			z-index: -1;
+		}
+
+		@include VP480 {
+				padding-top: 0px;
+				padding-bottom: 8px;
+			}
+
+		.hero-info {
+			@include VP480 {
+				display: block;
+			}
+		}
+
+		.hero-usp {
+
+			@include VP480 {
+				width:100%;
+				text-align: center;
+			}
+
+		}
+		.hero-text {
+			@include VP480 {
+				text-align: center;
+				width: 100%;
+			}
+		}
+		.ps-usp{
+			@include VP480 {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	
+	}
+
+
+	&.-connect {
+		background: $white;
+		&:before {
+			background: #fff;
+			
+		}
+	}
+
+	&.-brand {
+		position: relative;
+
+		.logo {
+			border-radius: 120px;
+			height: 150px;
+			width: 150px;
+			// background-color: var(--ps-skin);
+			position: absolute;
+			top: 16px;
+			transform: translateX(50%);
+			right: 50%;
+			z-index: 2;
+			overflow: hidden;
+
+			@include VP480 {
+				height: 160px;
+				width: 160px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0px;
+			}
+
+			@include VP600 {
+				right: 32px;
+			}
+
+			@include VP1280 {
+				height: 180px;
+				width: 180px;
+			}
+		}
+
+		.hero-top {
+			position: relative;
+			z-index: 1;
+			padding: 160px 0 8px 0;
+			max-width: 720px;
+			    margin: 0 auto;
+
+			@include VP480{
+				padding: 24px 150px 24px 0;;
+			}
+
+			@include VP1280{
+				//padding: 24px 200px 24px 0;;
+			}
+			
+		}
+
+		.hero-body {
+			padding: 0 32px;
+		}
+
+		.hero-text {
+			position: relative;
+			z-index: 1;
+		}
+		.hero-header {
+			line-height:1;
+			text-align: center;
+			
+			position: relative;
+			z-index: 1;
+			padding: 24px 0 24px 0;
+			font-size: 32px;
+			span {
+				display: block;
+				font-size: .6em;
+				line-height:1;
+				padding: 8px 0 4px;
+			}
+
+			@include VP480 {
+				padding: 32px 0 32px 0;
+				text-align: left;
+				max-width: none;
+			}
+
+			@include VP600 {
+				padding: 48px 0 48px 0;
+				font-size: 44px;
+				max-width: none;
+			}
+	
+		}
+
+		&.-indg {
+			background: rgba(255,255,255,.12);
+			background: url(https://media.indiangarden.nu/2015/11/web_ig_mos_007-1024x430.jpg);
+			background-size: cover;
+		}
+		&.-olea {
+			background: rgba(255,255,255,.12);
+			background: url(https://s3-eu-west-1.amazonaws.com:443/files.olearyssportsbar.com/Background_activities_2732x1536.jpg.1250x702_q85.jpg);
+			background-size: cover;
+
+		}
+		&.-turb {
+			background: rgba(255,255,255,.12);
+			background: url(https://turbosportzone.se/assets/uploads/2019/06/banner-03.jpg);
+			background-size: cover;
+		}
+		&:before {
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			background-color: var(--ps-skin);
+			top: 0;
+			left: 0;
+			z-index: 0;
+			opacity: .78;
+		}
+
+	
+
+
+
+		&.-no-img-overlay {
+
+			&:before {
+				display:none
+			}
+	
+		}
+	}
+
+
+
+
+}
+
+
+

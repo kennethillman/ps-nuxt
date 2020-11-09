@@ -1,0 +1,156 @@
+//
+// PS - FORMS
+// 
+
+
+.ps-forms {
+
+	.ps-label {
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 0 0 8px;
+		display: block;
+	}
+
+	.ps-coupon {
+		position: relative;
+		.-code {
+			position: absolute;
+			right: 3px;
+			top: 3px;
+		}
+	}
+
+	input[type=text] {
+		border: none;
+		padding: 8px;
+		margin: 0 0 8px;
+		background: $gray-200;
+		width: 100%;
+		font-size: 14px;
+		font-family: $font-ps;
+
+		&:focus {
+			outline-color: var(--ps-link);
+			outline-offset: 4px;
+			outline: none;
+			
+		}
+
+		.ps-info & {
+			background: $gray-200;
+			padding:12px;
+			font-size: 16px;
+			border-radius: 4px;
+		}
+
+		.-mode-dark &{
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		  		color: $gray-600;
+		  		opacity: 1; /* Firefox */
+			}
+		}
+		
+	}
+
+	
+
+	.radio-wrapper {
+		font-weight: bold;
+		font-size: 16px;
+		padding: 8px 0 8px 0;
+		line-height: 1;
+		display: block; 
+		position: relative;
+		display: flex;
+		justify-content: space-between; 
+
+		input[type=radio] {
+			position: absolute;
+			right: 0px;
+		}
+
+		.ps-info & { 
+			font-size: 14px;
+			padding-left: 2px;
+
+		}
+
+	}
+
+
+
+
+	/* The container */
+	.ps-rc {
+	  display: block;
+	  position: relative;
+	  padding-left: 28px;
+	  margin-bottom: 12px;
+	  cursor: pointer;
+	  font-size: 22px;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+
+	// R - Radio & C - Checkmartk - RC - rc
+
+	.ps-rc input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	}
+
+	.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 25px;
+	  width: 25px;
+	  background-color: $gray-200;
+	  border: 2px solid $gray-200;
+	  border-radius: 50%;
+	  transition: all .375s ease-in-out;
+
+	}
+
+
+	// .ps-rc:hover input ~ .checkmark {
+	//   border: 2px solid var(--ps-link);
+	// }
+
+	.ps-rc input:checked ~ .checkmark {
+	    background-color: var(--ps-link);
+	  border: 2px solid var(--ps-link);
+	}
+
+	.checkmark:after {
+	  content: "";
+	  position: absolute;
+	  display: none;
+	}
+
+	.ps-rc input:checked ~ .checkmark:after {
+	  display: block;
+	}
+
+	.ps-rc
+	 .checkmark:after {
+	 	top: 7px;
+		left: 7px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: white;
+	}
+
+
+}
+
+
+
+
+

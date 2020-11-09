@@ -1,0 +1,167 @@
+//
+// PS - ACCORDION
+// 
+
+.ps-accordion {
+	padding: 0 16px;
+	
+}
+
+.ps-accordion-group {
+	@extend .ps-text-black;
+	display: block;
+	position: relative;
+	flex-shrink: 0;                  
+	text-decoration: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+	background-color: $white;
+	margin: 0 0 3px;
+	border-radius: 6px;
+	overflow: hidden;
+	line-height: 1;
+
+	.ps-accordion-products {
+		display: none;
+	}
+
+	.ps-accordion-header {
+
+		
+		padding: 16px 64px 16px 24px;
+		cursor: pointer;
+
+		&.-no-image {
+			padding-left: 24px;
+			.image {
+				display: none;
+			}
+			.header {
+				padding-left: 0px;
+			}
+		}
+
+		&:active {
+			background-color: $gray-100; 
+		}
+
+		.header {
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.image {
+			position: absolute;
+			top: 12px;
+			left: 16px;
+			height: 60px;
+			width: 60px;
+			background: $gray-200;
+			border-radius: 4px;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: auto;
+				display: none;
+			}
+		}
+
+
+
+		.icon {
+			overflow: hidden;
+			border-radius: 50px;
+			background: var(--ps-link);
+			position: absolute;
+			right: 16px;
+			top: 8px;
+			height: 32px;
+			width: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			svg {
+				fill: var(--ps-btn-txt);
+				height: 16px;
+				width: 16px;
+				margin: 0 0 0 2px;
+				transform: rotate(90deg);
+			}
+		}
+
+		//&.-sub {
+			min-height: 86px;
+			.icon {
+				top: 26px;
+			} 
+			.header {
+				margin-top: 17px;
+				padding-left: 76px;
+			}
+		//}
+
+
+
+	}
+
+	&.-sub {
+		display: none;
+		box-shadow: none;
+		margin: 0;
+		border-top: 1px solid $gray-200;	
+	}
+
+
+	&.-open-group {
+
+		.-sub {
+			display: block; 
+		}
+
+		> .ps-accordion-header {
+			.header {
+				color: $white;
+				position: relative;
+				z-index: 2;
+			}
+
+			.icon {
+				right: 16px;
+				height: 32px;
+				width: calc(100% - 28px);
+				z-index: 1;
+				justify-content:  flex-end;
+				svg {
+					margin-right: 8px;
+					transform: rotate(-90deg);
+				}
+			}
+
+			
+				.icon {
+					width: calc(100% - 104px);
+				}	
+			
+
+			&.-no-image {
+
+				.icon {
+					width: calc(100% - 28px);
+				}
+			
+			}
+
+		}
+
+
+		> .ps-accordion-products {
+			display: block;
+		}
+
+
+
+	}
+
+
+}

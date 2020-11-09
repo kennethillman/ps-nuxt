@@ -1,0 +1,85 @@
+//
+// TYPOGRAPHY
+// 
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: $black;
+}
+
+
+body {
+
+  font-family: $font-ps;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black;
+  text-align: left;
+  &.-mode-dark {
+    color: $white;
+  }
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-ps;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1;
+  text-align: center;
+  padding: 24px 24px;
+
+  &.-group {
+    font-size: 28px;
+    span {
+      padding-top: .4px;
+      display: block;
+      font-size: 22px;
+      color: var(--ps-link);
+    }
+  }
+}
+
+
+
+.header {
+  &.-small {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 16px;
+    line-height: 1;
+  }
+}
+
+
+
+
+/////
+
+// TYPYGRAPHY CLASSES
+
+
+.ps-text-black {
+  color: $black;
+}
+
+
+.ps-txt-s,
+.ps-txt-small {
+  font-size: 13px;
+}
+
+.ps-txt-m,
+.ps-txt-medium {
+  font-size: 15px;
+}
+
+
+

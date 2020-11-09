@@ -1,0 +1,176 @@
+//
+// TEMP
+// 
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+	
+
+.pur-temp {
+	font-family: 'Titillium Web', sans-serif;
+
+	h1 {
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 32px;
+		line-height: 1.1;
+		text-align: center;
+		padding: 32px 24px;
+	}
+
+	a {
+		color: var(--link);
+	}
+
+	min-height: 100vh;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	flex-direction: column;
+  	position: relative;
+
+  	&-wrapper {	
+  		min-height: 100vh;
+		width: 100vw; 
+		background-color: #333;
+	  	align-items: center;
+	  	justify-content: space-evenly;
+	  	display: flex;
+  	}
+
+	.pur-iphonex{
+		width: 375px;
+		height: 812px;
+		background-color: #fff;
+		border-radius: 24px;
+		overflow: hidden; 
+		  	position: relative;
+		// display: flex;
+	 //  	align-items: center;
+	 //  	justify-content:  center;
+
+	}
+
+	.box {
+		background-color: #fff;
+		border-radius: 6px;
+		overflow: hidden;
+		box-shadow: 0 2px 6px rgba(0,0,0,.12);
+		margin: 0 24px 24px;
+		padding: 16px;
+		color: #000;
+	}
+
+	.header {
+		height: 70px;
+		width: 100%;
+		background-color: #fff;
+		box-shadow: 0 2px 4px rgba(0,0,0,.08);
+	}
+	.merchant {
+		height: 70px;
+		width: 100%;
+		background-color: rgba(0,0,0,.08);
+	}
+	.time {
+		height: 40px;
+		width: 100%;
+		background-color: rgba(0,0,0,.04);
+	}
+
+	.-mode-dark {
+
+		h1{
+			color: #fff;
+		}	
+
+		.header {
+
+			background-color: #000;
+		}
+		.merchant {
+
+			background-color: rgba(255,255,255,.04);
+		}
+		.time {
+
+			background-color: rgba(255,255,255,.02);
+		}
+	}
+
+
+	.logo {
+		margin: 0;
+		padding: 0;
+		width: 136px;
+		margin: 40px auto;
+		
+		svg {
+			height: 136px;
+			width: 136px;
+			fill: var(--primary-dark);
+		}
+		
+	}
+
+	.header-temp {
+		font-size: 40px;
+		letter-spacing: 0;
+		font-weight: 700;
+		line-height: 1.12;
+		span {
+			font-size: 24px;
+			display: block;
+			
+		}
+	}
+
+	.header-small-temp {
+		font-size: 40px;
+		letter-spacing: 0;
+		font-weight: 700;
+		line-height: 1;
+		span {
+			font-size: 24px;
+			display: block;
+			line-height: 1.256;
+		}
+	}
+
+
+	.colors {
+		display: flex;
+		direction: column;
+		width: 375px;
+		align-items: center;
+		justify-content: center;
+		padding: 0 0 16px;
+
+		div {
+			overflow: hidden;
+			border-radius: 100px;
+			height: 50px;
+			width: 50px;
+			background-color: red;
+			margin: 0 8px;
+
+
+			&.one {
+				background-color: var(--primary);
+			}
+			&.two {
+				background-color: var(--primary-light);
+			}
+			&.three {
+				background-color: var(--primary-dark);
+			}
+			&.four {
+				background-color: var(--link);
+			}
+			&.five{
+				background-color: var(--text-color);
+			}
+		}
+	}
+}
+
+

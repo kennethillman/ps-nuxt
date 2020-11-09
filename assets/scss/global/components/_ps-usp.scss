@@ -1,0 +1,88 @@
+//
+// PS - USP
+// 
+
+
+.ps-usp {
+
+
+
+	font-size: 18px;
+	line-height: 1.1;
+	font-weight: bold;
+	color: $black;
+	text-align: center;
+	@extend .ps-text-black;
+
+	.-mode-dark & {
+		color: $white;
+	}
+
+	.usp-body {
+		display: inline-block;
+	}	
+
+	ul {
+		padding: 8px 24px;
+		margin: 0 auto;
+		text-align: center;
+		display: inline-block;
+	}
+
+	li {
+		
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 20px;
+		text-align: left;
+		display: block;	
+
+	}
+
+	figure {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-44%);
+		// background: $white;
+		// box-shadow: 0 2px 6px rgba(0,0,0,.12);
+		svg {
+			
+			height: 26px;
+			width: 26px;
+			//fill: $gray-600;
+			fill: var(--ps-link);
+		}
+	}
+
+
+		@include VP480 {
+			margin-top: -4px;
+			font-size: 20px;
+			li {
+				padding-left: 42px;
+			}
+			figure {
+				svg {
+					height: 28px;
+					width: 28px;
+				}
+			}
+		}
+
+		@include VP480 {
+		font-size: 22px;
+			li {
+				padding-left: 44px;
+			}
+			figure {
+				svg {
+					height: 30px;
+					width: 30px;
+				}
+			}
+		}
+
+
+}
+

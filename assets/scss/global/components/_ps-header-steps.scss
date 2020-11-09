@@ -1,0 +1,339 @@
+//
+// PS - HEADER - STEPS
+// 
+
+
+
+.ps-header-steps {
+
+	max-width: 520px;
+	margin: 0 auto; 
+
+
+// - - - VP320
+
+    @include VP320 {
+
+    // - - General
+
+    // Color Variable
+    $step-inactive-color: #eaeaea;
+
+    // - - Steps
+
+	    .box-steps {
+        @include clearfix();
+        font-family: $font-ps;
+        margin: 0px 60px 0 72px;
+        height: 50px;
+        position: relative;
+        top: 11px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+	    }
+
+
+    // - - Step
+
+        .step {
+
+   
+            position: relative;
+            z-index: 2;
+            //top: 0;
+            text-align: center;
+            height: 32px;
+
+            div {
+            		content: '';
+            		z-index: -1; 
+                width: 38px;
+                height: 32px;
+                line-height: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                color: $black;
+                border-radius: 50px;
+                //opacity: .4;
+                background: var(--ps-skin);
+                position: absolute;
+                top:0;
+                left: -3px;
+               
+            }
+
+            figure {
+                width: 32px;
+                height: 32px;
+                line-height: 28px;
+                font-size: 16px;
+                font-weight: bold;
+                border: 2px solid $black;
+                color: $black;
+                border-radius: 50px;
+                opacity: .4;
+                background: var(--ps-skin);
+               
+            }
+
+            span {
+                display: block;
+                font-size: 10px;
+                color: $black;
+                position: absolute;
+                z-index: 3;
+                text-align: center;
+                width: 100px;
+                margin-left: -50px;
+                top: 100%;
+                left: 50%;
+                line-height: 1;
+                margin-top: .3rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                
+            }
+
+
+
+            // Active
+            &.-active {
+
+            		z-index: 2;
+
+                figure {
+                    color: var(--ps-btn-txt);
+                    border-color: var(--ps-link);
+                    background: var(--ps-link);
+                    opacity: 1;
+                }
+
+                span {
+                    color: var(--ps-link);
+                    opacity: 1;
+                }
+
+			          &:before,
+				        &:after {
+				        	content: '';
+			            position: absolute;
+			            top: 16px;
+			            z-index: -2;
+			            width: 50%;
+			            display: block;
+			            width: 100vw;
+			            height: 2px;
+			            border: none;
+			            // background: var(--ps-link);
+				            
+				        }
+
+				        &:before {
+				          left: 0;
+				          margin: 0 31px;
+				          background: $black;
+				          opacity: .3;
+				            
+				        }
+
+				        &:after {
+				          right: 0;
+				       		margin: 0 31px;  
+				       		background: var(--ps-link);
+				        }
+
+            }
+
+
+
+            // Done
+            &.-done {
+
+            		z-index: 3;
+
+                figure {
+                    color: var(--ps-link);
+                    border-color: var(--ps-link);
+                    background: var(--ps-skin);
+                    opacity: 1;
+                }
+                span {
+                    color: var(--ps-link);
+                    opacity: 1;
+                }
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+    // - - Side lines
+
+        .box-steps {
+
+
+
+            // Side lines
+
+             div:first-child {
+               div {
+               	&:before{
+				        	content: '';
+			            position: absolute;
+			            top: 16px;
+			            z-index: -2;
+			            width: 50%;
+			            display: block;
+			            width: 100vw;
+			            height: 2px;
+			            border: none;
+			            background: var(--ps-skin);
+				          right: 0;
+				          margin: 0 31px;            
+				        }
+               }
+            }
+
+            div:last-child {
+
+               div {
+               	&:before{
+				        	content: '';
+			            position: absolute;
+			            top: 16px;
+			            z-index: -2;
+			            width: 50%;
+			            display: block;
+			            width: 100vw;
+			            height: 2px;
+			            border: none;
+			            background: var(--ps-skin);
+				          left: 0;
+				          margin: 0 31px;            
+				        }
+               }
+            }
+
+        		div:nth-child(1) {
+              figure {
+              	&:after {
+              		content: '1';
+              	}
+              }
+            }
+            div:nth-child(2) {
+              figure {
+              	&:after {
+              		content: '2';
+              	}
+              }
+            }
+            div:nth-child(3) {
+              figure {
+              	&:after {
+              		content: '3';
+              	}
+              }
+            }
+            div:nth-child(4) {
+              figure {
+              	&:after {
+              		content: '4';
+              	}
+              }
+            }
+            div:nth-child(5) {
+              figure {
+              	&:after {
+              		content: '5';
+              	}
+              }
+            }
+
+
+        }
+
+
+ 		// - - Mode dark
+
+        .-mode-dark & {
+          div {
+            color: $white;
+          }
+          figure {
+            border: 1px solid $white;  
+            color: $white;
+						background: var(--ps-skin);
+             
+          }
+          span {
+            color: $white;
+          }	
+	        .step {
+	          &.-active {
+			        &:before {
+			          background: $white;
+			        }
+	          }
+	        }
+        }
+
+    }
+
+
+// - - - VP600
+
+    @include VP600 {
+
+        // - - Steps
+
+        .box-steps {
+
+            .line-left {
+                div {
+                    margin: 0 41px 0 57px;
+                }
+            }
+
+            .line-right {
+                div {
+                    margin: 0 57px 0 41px;
+                }
+
+            }
+        }
+
+    }
+
+
+// - - - VP768
+
+    @include VP768 {
+
+    // - - General
+
+        width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+
+        // - - Steps
+
+        .box-steps {
+            //margin: 50px 44px 35px;
+        }
+
+
+
+    }
+
+}

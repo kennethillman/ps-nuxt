@@ -1,0 +1,116 @@
+//
+// PS - BOX
+// 
+
+.ps-box {
+	padding: 16px;
+}
+
+div[class *= "ps-"]{
+	.divider {
+		border-top: 1px solid $gray-200;	
+		margin: 16px 0;
+	}
+
+			.header {
+			span {
+				display: block;
+				font-size: 16px;
+				font-weight: normal;
+				line-height: 1.4;
+			}
+		}
+
+		.header-2 {
+			font-size: 16px;
+			text-transform: uppercase;
+			padding-bottom: 4px;
+			&.-row {
+				display: inline-block;
+				
+				margin-bottom: 16px;
+				span {
+					text-transform: none;
+					font-weight: normal;
+					display: inline-block;
+					padding-left: 4px;
+				}
+			}
+		}
+}
+
+.ps-the-box {
+	background-color: #fff;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 2px 6px rgba(0,0,0,.12);
+	padding: 8px;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ps-the-box-text-black {
+	@extend .ps-text-black;
+}
+
+.ps-the-box-text {
+	@extend .ps-text-black;
+	line-height: 1;
+
+
+	.header {
+		font-size: 22px;
+		line-height: 1;
+		padding: 0 0 24px;
+		margin: 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.text {
+		margin: 0 0 24px;
+		line-height: 1.256;
+	}
+
+	.-info &{
+		padding: 32px 24px;
+	}
+
+	.-receipte & {
+
+	}
+
+	.products {
+
+		.row {
+			margin-bottom: 8px; 
+			display: flex;
+			// > div {
+			// 	display: inline-block;
+			// } 
+			.left {
+				width: 65%;
+			}
+			.right {
+				text-align: right;
+				width: 35%;
+			}
+		}
+		.text {
+			margin: 0;
+		}
+		.-p {
+			padding-top: 16px;
+		}
+
+		.-b {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+
+
