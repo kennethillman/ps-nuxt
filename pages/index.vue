@@ -153,7 +153,7 @@
 
             <div class="location">
               <div>
-                <span>Drottninggatan 64</span><br>
+                <span>Drottninggatan 64</span>
                 <span>Stockholm, 123 45</span>
               </div>
             </div>
@@ -167,30 +167,37 @@
           Handlare, A-Ö
         </div>
 
-        <div v-for="item of merchants" class="ps-item -merchant -small">
-          <nuxt-link :to="/location/ + item.id" :id="item.id">
+ 
+          <nuxt-link :to="/location/ + merch.id" :id="merch.id" v-for="merch of merchants" class="ps-item -merchant -small" :key="merch.id">
 
             <figure class="merchant-logo">
 
-                <img :src="item.imageUrl">
+              <template v-if="merch.imageUrl">
+                <figure class="merchant-logo">
+                  <img :src="merch.imageUrl">
+                </figure>
+              </template> 
+              <template v-else>
+                <figure class="merchant-logo -text" :style="{ background: merch.skin.vars.colors.skin}">
+                  <i class="logo-text">
+                    {{merch.group.slice(0, 3)}}
+                  </i>
+                </figure>
+              </template> 
+                
 
             </figure>
             <div class="merchant-info">
-              <div class="name">{{item.name}}</div>
+              <div class="name">{{merch.nameShort}}</div>
               <div class="location">
                 <div>
-                  <span>Drottninggatan 64, Stockholm, 123 45</span>
+                  <span>{{merch.adress}}, {{merch.city}}, {{merch.postal}}</span>
                 </div>
               </div>
             </div>
 
           </nuxt-link>
         </div>
-
-
-      </div>
-
-
 
 
     </div>
@@ -302,7 +309,8 @@
 export default {
   data() {
     return {
-      merchants: this.$store.getters.getMerchants
+      merchants: this.$store.getters.getMerchants,
+      ps: this.$store.getters.getPs,
     };
   },
   head() {
@@ -320,21 +328,19 @@ export default {
         }
       ],
       style: [
-        // { cssText: 'body { color: green!important }', type: 'text/css' }
-
         { cssText:
           `:root {
-            --ps-skin: #ffffff;
-            --ps-skin-bg: linear-gradient(#fff, #fff 34vh, #e9e9e9 90vh);
-            --ps-link: #99bd48;
-            --ps-btn-txt: #ffffff;
+            --ps-skin: ${this.ps[0].settings.skins.vars.default.skin};
+            --ps-skin-bg: ${this.ps[0].settings.skins.vars.default.skinBg};
+            --ps-link: ${this.ps[0].settings.skins.vars.default.link};
+            --ps-btn-txt: ${this.ps[0].settings.skins.vars.default.btnText};
           }
 
           .-mode-dark {
-            --ps-skin: #000;
-            --ps-skin-bg: linear-gradient(#0e0e0e, #0e0e0e 34vh, #000 90vh);
-            --ps-link: #99bd48;
-            --ps-btn-txt: #ffffff;
+            --ps-skin: ${this.ps[0].settings.skins.vars.dark.skin};
+            --ps-skin-bg: ${this.ps[0].settings.skins.vars.dark.skinBg};
+            --ps-link: ${this.ps[0].settings.skins.vars.dark.link};
+            --ps-btn-txt: ${this.ps[0].settings.skins.vars.dark.btnText};
           }` ,
           type: 'text/css'}
       ]

@@ -1,0 +1,80 @@
+[
+   {
+      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Olearys",
+      "name":"Mall of Scandinavia",
+      "nameShort":"MoS",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#2b9c86"
+            }
+         }
+      }
+   },
+   {
+      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Indian Garden",
+      "name":"Mall of Scandinavia",
+      "nameShort":"MoS",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#040707"
+            }
+         }
+      }
+   },
+   {
+      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Turbo",
+      "name":"Uppsala",
+      "nameShort":"Uppsala",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#17407d"
+            }
+         }
+      }
+   }
+]

@@ -176,7 +176,7 @@
 		padding-bottom: 8px;
 		line-height: 1.256;
 		align-items: center;
-
+		color: $black;
 
 		.merchant-logo {
 			border-radius: 100%;
@@ -188,7 +188,21 @@
 			overflow: hidden;
 			box-shadow: 0 2px 6px rgba(0,0,0,.12);
 
+			&.-text {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+			}
 
+
+		}
+
+		.logo-text {
+			font-style: normal;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 24px;
 		}
 
 		.name {

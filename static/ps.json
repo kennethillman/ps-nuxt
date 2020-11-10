@@ -1,0 +1,26 @@
+[
+   {
+      "app":{
+         "name":"Purpsot"
+      },
+      "settings":{
+         "skins":{
+            "mode":"default",
+            "vars":{
+               "default":{
+                  "skin":"#ffffff",
+                  "skinBg":"linear-gradient(#fff, #fff 34vh, #e9e9e9 90vh)",
+                  "link":"#99bd48",
+                  "btnText":"#ffffff"
+               },
+               "dark":{
+                  "skin":"#000000",
+                  "skinBg":"linear-gradient(#0e0e0e, #0e0e0e 34vh, #000 90vh)",
+                  "link":"#99bd48",
+                  "btnText":"#ffffff"
+               }
+            }
+         }
+      }
+   }
+]
