@@ -193,6 +193,27 @@
 				height: 180px;
 				width: 180px;
 			}
+
+			&.-text {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $black;
+			}
+
+			&.-dark {
+				.logo-text {
+					color: $white;
+				}
+			}
+
+			.logo-text {
+				font-style: normal;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 24px;
+			}
+
 		}
 
 		.hero-top {
@@ -249,22 +270,7 @@
 	
 		}
 
-		&.-indg {
-			background: rgba(255,255,255,.12);
-			background: url(https://media.indiangarden.nu/2015/11/web_ig_mos_007-1024x430.jpg);
-			background-size: cover;
-		}
-		&.-olea {
-			background: rgba(255,255,255,.12);
-			background: url(https://s3-eu-west-1.amazonaws.com:443/files.olearyssportsbar.com/Background_activities_2732x1536.jpg.1250x702_q85.jpg);
-			background-size: cover;
 
-		}
-		&.-turb {
-			background: rgba(255,255,255,.12);
-			background: url(https://turbosportzone.se/assets/uploads/2019/06/banner-03.jpg);
-			background-size: cover;
-		}
 		&:before {
 			content: "";
 			height: 100%;

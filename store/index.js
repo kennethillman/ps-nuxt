@@ -6,6 +6,7 @@ export const state = () => ({
   activeStep: 1,
   ps: false,
   merchants: false,
+  merch: false,
   order: false,
   showModal: false,
   termsAccepted: false,
@@ -20,6 +21,9 @@ export const mutations = {
   },
   setMerchants(state, res) {
     state.merchants = res
+  },
+  setMerch(state, res) {
+    state.merch = res
   },
   setPs(state, res) {
     state.ps = res
@@ -48,12 +52,11 @@ export const actions = {
 
 async nuxtServerInit({ commit }) {
 
-  const psm = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/merchants')
-  .then(response => response.json())
+  // const psm = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/merchants')
+  // .then(response => response.json())
+  // commit('setToken', psm)
 
   commit('setMerchants', psMerchantsData)
-  commit('setToken', psm)
-
   commit('setPs', psData)
 
 },
@@ -62,6 +65,9 @@ async nuxtServerInit({ commit }) {
   },
   setPs(vuexContext, data) {
     vuexContext.commit('setPs', data)
+  },
+  setMerch(vuexContext, data) {
+    vuexContext.commit('setMerch', data)
   },
   setShowModal(vuexContext, bol) {
     vuexContext.commit('setShowModal', bol)
@@ -86,6 +92,9 @@ export const getters = {
   },
   getMerchants(state) {
     return state.merchants
+  },
+  getMerch(state) {
+    return state.merch
   },
   getPs(state) {
     return state.ps

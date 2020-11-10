@@ -72,15 +72,33 @@
 
 
     <!-- hero -->
-      <div class="ps-hero -brand -olea -no-img-overlay">
+      <div class="ps-hero -brand -no-img-overlay">
     <div class="hero-body">
 
       <div class="hero-top">
-        <h1 class="hero-header"><span>Välkommen till Purspot</span><i>{{mm.name}}</i><span>En mobil Expresskassa!</span></h1>
+        <h1 class="hero-header"><span>Välkommen till Purspot</span><i>{{merchant.group}}<br>{{merchant.name}}</i><span>En mobil Expresskassa!</span></h1>
 
-        <figure class="logo">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEUtm4f///8el4IomoUjmIQZloH0+Pf5+/oSlX+s0Mjk7+x1tafv9fQAk337/PyRwrfU5uI3nYpIo5Hf7OmGvbGkzMNWqJdrsaLN4t221c6NwLXC3NZMpJOZxrxbqpqPwbZws6X4crfzAAAKKklEQVR4nO2a6ZaqOBCAIQtGFmUHRWjf/yknS1WI2nemxZljO6e+X4IsqVSlthBFBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQvxympFT83aP4D6m6siyny/9XxDqNDfm7x/EvwpQqikIJd8SjxkoYn9l7h/U6XCojg6zbqUmSfJxrJ5I8OQnnD5dQ8OE0dhGrujwG8taqkX25wwwXImdSfp607DIaKcY2jQNaIwgf3EEFV0ZZt9+30WfJyNk+/o5dr/UmnISlVSGLup09TFr17lE/gRrSbwWM45P0Elp9qtbbcDzLd4/7x7DjneaaESVOtBSstYtSGV90o+rq3QP/IaI63Qo4LlIJFGUQkRPLqJB1Nxd2n7EUedXcCjgVxoMWcFa7U14asbUK5RxeVx77d4/9R7BLci+gOw/qahmvtWvJax6pc6joSyHePPSfwYYdjtlJulvcwFcJmdZcvnDtcPylcZKJz5BPC+g1mDp3U4KDxETmysUylhcjz+pvy8tnrEAt4OIFbCqntD1IqNw6POiKQiipQ6Fa/dEUfUqZIWovYBmpyf7A5LM+2MMcwzpfVgE/Jg7yaNUgF2wMh8/AbU4+cfE2OhbPv4m9KY8tcdB5xSOQsHF/FSk6GnfMfKAonx+r7I+nuXrWshl7dS0wv7CSXqyHN8l2goV9jclaWnsnakqMP+jmZmxs3tl18Axc1Mf5+pq/lq1fWFczTEzdciMCB/WO6Fl9tjaASFwWw3w6neb6LgEXTJfPvSqse3ICujuzv1cJZ6E8Llidnl8QwUB6H92+nBjVqlF2hd+Ze6sN+paju1YUw+QdT5ieCrV0zgunp95OBu/huscCmgVCiew8CH9FAU9vt2uRM5+rneC5GAHjXGDfIoXBK1Rh6dYGW/wSjm98q8zCPzJrG7iCO8Vux8vmLvOBVeo5TM6gZp7h2La77dVzpP5c5UaXLgr//IL3Vwc4YSM/r/Z4DJYLAxPVdHPeLj1fee7KeakC9yGMcpMjpFDn8EkK52m/2QVzP+Z4WT2HOI/l1FYMw2SOKwlLCpsOsBrVn8yttV6wPzastaOT0NwvsuBMOu691iAAmxpbm5S71VUrIoI5eaH3xfxk7wNHoZ2jUiwqcAaP+AKQODWTwXBdxZO+fFzHVXzFd7hQA2Ho7qye5GCGsWoZzIEAx53W2210TVDSxz+9AefwAuxEWZ+7puqdnpvKhs3ZjMtndWNbRVU77XCBV3eaTapwkpPajAcKnNJO4QX7sy/Ew1WF7YMdCK+jDFdhijoLU3Vjmq76t2pQYMlpxpg2BqX6c7jC8qzEG3dVOMl2pWEwMnFZgIBxsl2+SCyoh+bhv7UgHjGdgbJwp0tE7H+bkXE99faoVF7WeKyYeX6W9eD6ubDP2xeyhxaPMxs+ruLieEyKKPwbXunPrvH7Id5wiepNLvhfur6wwDVVKl1zwD/aAYrlAGrmxubMgEdnZE50kxuxi7vGrm4G/sceFKu0LApsetkcDRkaTP7QS1prJJ+RQq6TFqs6452Zi8UNRicMHNZaaXMQ535cDgNO0vgzVvrn+GlrjJ/DFFG/UUI556Y53drq8vH0Mdz4SOjzgAgn9WoGjFNzlqoGQzCOVI7BhIHB7hZzg1ueiTZwtGMruPed5gCyfL0qZGZfcGgL99LTxpZskGTeeSuvIx8KIwkexCQu3ss2bJmcsIcvbZeY8oBrAn0aTwwhwc4kyGEHXe1WCXBGeq5ceM0zCaZ06Le5U58xxHdTpHwyfljw0cKdsEUGOtW4xeXYLGrN4V2avrY/IvQnxiuCr3VtIFjsua1cwMJnCesh1fkspgn7bRGxwHwmv0nd+WqicYtPxrhi+tu4XvQYnAryL10/cK9ZO3gBUcBmlNCd0wsM47tNMBg8yKbxYFGpgvJtFGYjAdZjvq24KFCOJtShkGsjZsY/cCw2w/QXnIrZpJktC2OZiy4c9GzDOmQHxv/ATNmVin7Jhg0OkaKHrLhzr8Z69EUJ00BCVq9VwRqI0C7tepAYKVsm+uViN59E5JMH6/gFHJqEGqQ19TVsfdgnc7QLm3WCk9pDGMzAeDAR2hYSvYTrDAkW7LicfP6PWnM+1y9DvXy4cNGuXhvmJqfEGxK5Dv4sfUW9M/dg9hOb1yhYe9kukNoUleC1tznTVcIM69lLkB13itu0S6kCXGvqRPadjBqrJXB+jqtkWLjGnY6RcGByPVzBJgR5d7YruFCu1D7418OrMCHYaqVeXclQaDmiNsz+j0Uko6ybmnKCycbsxkvottW46sNyN06vZ//gVkmwetu4QtWeFZPrPtdpyMI9IQiBViYsb8ptOgxcyqGcpibcuEiuTBe4t9UAlju+oZgPSqpogMekd7WDYRpmd9Z9wAHt5bi5tuXjxY5u9rPAfE/hsTD4Ed7rP9JcGL/c7ZZ6v+NT1jgZJ7/DONU3e1e3G1m5C9nqdhJ28QN55q13/JpxGpqtubf600R2XET3m22Jb3R+NzM7nb/d9GzCij7OF/bNC5PsQeuTLkmqh33oZGNKE1ZPN5S9DuDsfH967ZCKh83+vQ4ZbG1L6jhfBzZfVnBneInWqxpu+zxJZpZbUDfB6WF7+cSy21cYmsy2wtT08E+KrZW77xnyfWWDfISOKm1VJPwMJcd1gNw/9XASQkfKeZq8IifowXGxD2f+tf0fdvdpQjJm8PXINxKuk8nZMLqB7fIxq70EXZok6dhagdk51dO3S/d1qAH3lY4+24MfXtuOQd7BLl1jn5+kp+XFnQ4RzSno8ZCM516iJQZfLRw6VM7BN724qq9t22ZDJYPyVPK+jxQWlNFwvQ6RvNWAuS9b4CwL42+gatMLu1z13X0kX+vo27eoOmvno36tVMEeCMc0bLev1VpnTesHQpwxxsGu/H08lEdwSHlu0OfgLnW0kwv7d/XdZY6X5fNjxcGuyH5/OnWL2xb1Gt0di/u9IK7934a3MsixR7diX2hrb8Z+toZecPX+TctDGQUTbVo+7w0YND86yFv6d38QoM6rf2vmSySN3plUVT83d4voR3BXW+4yeXGafLeAZrMlcOGHZprP5/NxP0Fe8GziiBvrg4SC976R8g5Y/03i6dX6bGrsTHNgvHah4ld81LGG9Eee/PALMiZdnECSm/0KCbUD775N877rmf890iYaqU4OXeKW/prPOuTQfCdgWT/nJ6ApYzpozW9SoYHLNnkQsHuIpf/0FBd7jgX08cdfo0IDK7IpFFLn3fJZPyicbeZYHte/wJGGCFYN3VSmqWlwLNUWA6tvDOEX2ajHfNxUVZW8/+jgp8iwMfN0tvARrFXu4fhJX8L/HI6fa0yXX+Vl/k1Yfdx3bfUpX+BugrGNq5ggCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCOL/wF8flXDfPVlBDgAAAABJRU5ErkJggg==">
-        </figure>
+              <template v-if="merchant.imageUrl">
+                <figure 
+                  class="logo"
+                  :style="{ background: merchant.skin.vars.colors.skin}"
+                  @click="setMerch(merch)"
+                >
+                  <img :src="require(`~/assets/logos/${merchant.imageUrl}`)" />
+                </figure>
+              </template> 
+              <template v-else>
+                <figure 
+                class="logo -text"
+                :class="{'-dark' : merchant.skin.mode === 'dark'}" 
+                :style="{ background: merchant.skin.vars.colors.skin}"
+                @click="setMerch(merch)"
+                >
+                  <i class="logo-text">
+                    {{merchant.group.slice(0, 3)}}
+                  </i>
+                </figure>
+              </template> 
       </div>
 
       <div class="hero-info">
@@ -131,8 +149,8 @@
   </div>
 
 
-    <h1>Välj Restaurang</h1>
-
+    <h1>Välj Varor</h1>
+<!-- 
     <div class="ps-items">
 
       <a href="ps-step-2.html" class="ps-item -place">
@@ -155,7 +173,7 @@
 
 
 
-    </div>
+    </div> -->
 
 
 
@@ -172,18 +190,15 @@
 
 
 export default {
-  asyncData ({ req, params }) {
-    // We can return a Promise instead of calling the callback
-    console.log('params -> ' , params.id )
-    //return fetch('https://jsonplaceholder.typicode.com/posts')
+  // asyncData ({ req, params }) {
 
-    return fetch('https://purspotapi-dev.azurewebsites.net/api/shop/locations/' + params.id)
-      .then(res => res.json())
-      .then((data) => {
-
-        return { mm: data[0] }
-      })
-  },
+  //   // We can return a Promise instead of calling the callback
+  //   return fetch('https://purspotapi-dev.azurewebsites.net/api/shop/locations/' + params.id)
+  //     .then(res => res.json())
+  //     .then((data) => {
+  //       return { mm: data[0] }
+  //     })
+  // },
 
   head () {
     return {
@@ -197,40 +212,42 @@ export default {
       style: [
         { cssText:
           `:root {
-            --ps-skin: #2b9c86;
-            --ps-link: #fbdb50;
+            --ps-skin: ${this.merchant.skin.vars.colors.skin};
             --ps-skin-bg: var(--ps-skin);
+            --ps-link: ${this.merchant.skin.vars.colors.link};
+            --ps-btn-txt: ${this.merchant.skin.vars.colors.btnText};
           }
 
           .-mode-dark,
           .-mode-light  {
-            --ps-skin: #2b9c86;
+            --ps-skin: ${this.merchant.skin.vars.colors.skin};
             --ps-skin-bg: var(--ps-skin);
-            --ps-link: #fbdb50;
-            --ps-btn-txt: #4b4118;
+            --ps-link: ${this.merchant.skin.vars.colors.link};
+            --ps-btn-txt: ${this.merchant.skin.vars.colors.btnText};
           }` ,
           type: 'text/css'}
       ]
-
-
 
     }
   },
   data() {
     return {
       id: this.$route.params.id,
-      merchant: null
+      merchant: this.$store.getters.getMerch
     }
   },
 
-  async fetch() {
-    this.merchant = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/locations/' + this.$route.params.id).then(res =>
-      res.json()
-    )
-  },
+  mounted() {
 
 
 
+  }
+
+  // async fetch() {
+  //   this.merchant = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/locations/' + this.$route.params.id).then(res =>
+  //     res.json()
+  //   )
+  // },
 
 }
 </script>

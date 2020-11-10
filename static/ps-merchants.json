@@ -13,14 +13,17 @@
       "latitude":0,
       "mapIcon":"",
       "description":null,
-      "imageUrl":"",
+      "imageUrl":"olearys.png",
+      "bgUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
       "skin":{
          "mode":"dark",
          "vars":{
             "colors":{
-               "skin":"#2b9c86"
+               "skin":"#2b9c86",
+               "link":"#fbdb50",
+               "btnText":"#4b4118"
             }
          }
       }
@@ -39,14 +42,17 @@
       "latitude":0,
       "mapIcon":"",
       "description":null,
-      "imageUrl":"",
+      "imageUrl":"indiangarden.png",
+      "bgUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
       "skin":{
          "mode":"dark",
          "vars":{
             "colors":{
-               "skin":"#040707"
+               "skin":"#040707",
+               "link":"#c7a43a",
+               "btnText":"#ffffff"
             }
          }
       }
@@ -65,16 +71,275 @@
       "latitude":0,
       "mapIcon":"",
       "description":null,
-      "imageUrl":"",
+      "imageUrl":"turbo.png",
+      "bgUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
       "skin":{
          "mode":"dark",
          "vars":{
             "colors":{
-               "skin":"#17407d"
+               "skin":"#17407d",
+               "link":"#dd3832",
+               "btnText":"#fff"
+            }
+         }
+      }
+   },
+   {
+   "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Light",
+      "name":"Light",
+      "nameShort":"Light",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"light",
+         "vars":{
+            "colors":{
+               "skin":"#eee"
+            }
+         }
+      }
+   },
+   {
+   "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Dark",
+      "name":"Dark",
+      "nameShort":"Dark",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#444"
+            }
+         }
+      }
+   },
+   {
+     "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "group":"Default",
+      "name":"Default",
+      "nameShort":"Default",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"default",
+         "vars":{
+            "colors":{
+               "skin":"#fff"
+            }
+         }
+      }
+   },
+
+   {
+      "id":"ps-0000-olea",
+      "group":"Olearys",
+      "name":"Kista",
+      "nameShort":"Kista",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#2b9c86",
+               "link":"#fbdb50",
+               "btnText":"#4b4118"
+            }
+         }
+      }
+   },
+   {
+      "id":"ps-0000-indg",
+      "group":"Indian Garden",
+      "name":"Västmannagatan",
+      "nameShort":"Västmanna..",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#040707",
+               "link":"#c7a43a",
+               "btnText":"#ffffff"
+            }
+         }
+      }
+   },
+   {
+      "id":"ps-0000-turb",
+      "group":"Turbo",
+      "name":"Västerås",
+      "nameShort":"Västerås",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#17407d",
+               "link":"#dd383",
+               "btnText":"#ffffff"
+            }
+         }
+      }
+   },
+   {
+   "id":"ps-0000-light",
+      "group":"Light",
+      "name":"Light 2",
+      "nameShort":"Light 2",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"light",
+         "vars":{
+            "colors":{
+               "skin":"#eee"
+            }
+         }
+      }
+   },
+   {
+   "id":"ps-0000-dark",
+      "group":"Dark",
+      "name":"Dark 2",
+      "nameShort":"Dark 2",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#444",
+               "link":"#99bd48",
+               "btnText":"#ffffff"
+            }
+         }
+      }
+   },
+   {
+   "id":"ps-0000-defa",
+      "group":"Default",
+      "name":"Default 2",
+      "nameShort":"Def 2",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"default",
+         "vars":{
+            "colors":{
+               "skin":"#ffffff",
+               "link":"#99bd48",
+               "btnText":"#ffffff"
             }
          }
       }
    }
+
+
 ]

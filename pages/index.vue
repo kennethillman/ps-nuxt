@@ -131,8 +131,10 @@
     <!-- search -->
     <div class="ps-search -full -start">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
-      <input type="text" name="" placeholder="Sök handlare...">
+      <input type="text" name="" placeholder="Sök handlare..." v-model="search">
     </div>
+
+
 
       <!-- mearchants -->
       <div class="ps-items -small -start">
@@ -163,22 +165,31 @@
 
 
 
-        <div class="header -small">
+        <div class="header -small" >
           Handlare, A-Ö
         </div>
-
  
-          <nuxt-link :to="/location/ + merch.id" :id="merch.id" v-for="merch of merchants" class="ps-item -merchant -small" :key="merch.id">
+          <nuxt-link :to="/location/ + merch.id" :id="merch.id" v-for="(merch, index) of filterdMerchants" class="ps-item -merchant -small" :key="index + merch.id"
+        
+          >
 
-            <figure class="merchant-logo">
-
+           
               <template v-if="merch.imageUrl">
-                <figure class="merchant-logo">
-                  <img :src="merch.imageUrl">
+                <figure 
+                  class="merchant-logo"
+                  :style="{ background: merch.skin.vars.colors.skin}"
+                  @click="setMerch(merch)"
+                >
+                  <img :src="require(`~/assets/logos/${merch.imageUrl}`)" />
                 </figure>
               </template> 
               <template v-else>
-                <figure class="merchant-logo -text" :style="{ background: merch.skin.vars.colors.skin}">
+                <figure 
+                class="merchant-logo -text"
+                :class="{'-dark' : merch.skin.mode === 'dark'}" 
+                :style="{ background: merch.skin.vars.colors.skin}"
+                @click="setMerch(merch)"
+                >
                   <i class="logo-text">
                     {{merch.group.slice(0, 3)}}
                   </i>
@@ -186,8 +197,8 @@
               </template> 
                 
 
-            </figure>
-            <div class="merchant-info">
+       
+            <div class="merchant-info" @click="setMerch(merch)">
               <div class="name">{{merch.nameShort}}</div>
               <div class="location">
                 <div>
@@ -307,12 +318,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      merchants: this.$store.getters.getMerchants,
-      ps: this.$store.getters.getPs,
-    };
-  },
   head() {
     return {
       bodyAttrs: {
@@ -346,7 +351,29 @@ export default {
       ]
 
     }
+  },
+  data() {
+    return {
+      search: '',
+      merchants: this.$store.getters.getMerchants,
+      ps: this.$store.getters.getPs,
+    };
+  },
+  computed: {
+    filterdMerchants() {
+      return this.merchants.filter(mearch => {
+         return mearch.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || mearch.group.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+      })
+    },
+  },
+
+  methods: {
+    setMerch(m) {
+      console.log('setMerch -> ' + m);
+      this.$store.dispatch("setMerch", m);
+    },
   }
+      
 }
 </script>
 

@@ -31,10 +31,8 @@
 
 		@include VP1280 {
 			padding: 40px 64px 0px;
-
-		
-
 		}
+		
 	}
 
 }
@@ -192,9 +190,14 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				color: $white;
+				color: $black;
 			}
 
+			&.-dark {
+				.logo-text {
+					color: $white;
+				}
+			}
 
 		}
 
