@@ -10,6 +10,7 @@
     }">
         <Header /> 
         <Nuxt />
+        <Cookie />
     </div>
 
   </div>
