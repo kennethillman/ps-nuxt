@@ -150,6 +150,9 @@
 
   <!-- {{locations}} -->
 
+
+  <Cart />
+
 </div>
 </template>
 

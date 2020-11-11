@@ -91,7 +91,10 @@
 	// DISABLED
 
 	&.-disabled {
-		opacity: .6;
+		.cart {
+			opacity: .6;
+		}
+		
 		.ps-btn {
 			background-color: $gray-500;
 			border-color: $gray-500;
