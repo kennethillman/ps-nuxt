@@ -1,75 +1,10 @@
 <template>
-<div class="purspot">
+<div>
 
 
   <div class="startpage-top">
 
-    <!-- header -->
-    <div class="ps-header ">
-      <div class="ps-body">
 
-        <figure class="ps-logo">
-            <LogoPurspot/>
-        </figure>
-
-        <div class="ps-header-steps">
-          <div class="box-steps ">
-
-             <div class="step -active">
-                <figure><span>Plats</span></figure>
-                <div></div>
-             </div>
-
-             <div class="step ">
-                <figure><span>Varor</span></figure>
-                <div></div>
-             </div>
-
-             <div class="step ">
-                <figure><span>Betala</span></figure>
-                <div></div>
-             </div>
-
-             <div class="step">
-                <figure><span>Bered.</span></figure>
-                <div></div>
-             </div>
-
-             <div class="step">
-                <figure><span>Hämta</span></figure>
-                <div></div>
-             </div>
-
-          </div>
-        </div>
-
-        <div class="ps-menu-toggle ">
-            <div class="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-        </div>
-
-
-        <div class="ps-menu">
-          <ul class="menu">
-                <li><a class="ps-btn" href="/about/consumer">Konsument</a></li>
-                <li><a class="ps-btn" href="/about/merchant">Handlare</a></li>
-                <li><a class="ps-btn" href="/contact">Purspot</a></li>
-                <li><a class="ps-btn" href="/history">Betalhistorik</a></li>
-                <li><br><a class="ps-btn -xsmall -inbl " href="/history">Logga in</a></li>
-            </ul>
-
-            <ul class="menu -lang">
-               <li><a class="ps-btn -xsmall  -inbl " href="/history">SV</a></li>
-               <li><a class="ps-btn -xsmall -ghost -inbl " href="/history">EN</a></li>
-            </ul>
-        </div>
-
-
-      </div>
-    </div>
 
     <!-- hero -->
     <div class="ps-hero">
@@ -130,7 +65,7 @@
 
     <!-- search -->
     <div class="ps-search -full -start">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg>
+      <svg-icon name="search" />
       <input type="text" name="" placeholder="Sök handlare..." v-model="search">
     </div>
 
@@ -169,34 +104,30 @@
           Handlare, A-Ö
         </div>
  
-          <nuxt-link :to="/location/ + merch.id" :id="merch.id" v-for="(merch, index) of filterdMerchants" class="ps-item -merchant -small" :key="index + merch.id"
-        
-          >
+          <nuxt-link :to="/location/ + merch.id" :id="merch.id" v-for="(merch, index) of filterdMerchants" class="ps-item -merchant -small" :key="index + merch.id">
 
-           
-              <template v-if="merch.imageUrl">
-                <figure 
-                  class="merchant-logo"
-                  :style="{ background: merch.skin.vars.colors.skin}"
-                  @click="setMerch(merch)"
-                >
-                  <img :src="require(`~/assets/logos/${merch.imageUrl}`)" />
-                </figure>
-              </template> 
-              <template v-else>
-                <figure 
-                class="merchant-logo -text"
-                :class="{'-dark' : merch.skin.mode === 'dark'}" 
+            <template v-if="merch.imageUrl">
+              <figure 
+                class="merchant-logo"
                 :style="{ background: merch.skin.vars.colors.skin}"
                 @click="setMerch(merch)"
-                >
-                  <i class="logo-text">
-                    {{merch.group.slice(0, 3)}}
-                  </i>
-                </figure>
-              </template> 
+              >
+                <img :src="require(`~/assets/logos/${merch.imageUrl}`)" />
+              </figure>
+            </template> 
+            <template v-else>
+              <figure 
+              class="merchant-logo -text"
+              :class="{'-dark' : merch.skin.mode === 'dark'}" 
+              :style="{ background: merch.skin.vars.colors.skin}"
+              @click="setMerch(merch)"
+              >
+                <i class="logo-text">
+                  {{merch.group.slice(0, 3)}}
+                </i>
+              </figure>
+            </template> 
                 
-
        
             <div class="merchant-info" @click="setMerch(merch)">
               <div class="name">{{merch.nameShort}}</div>
@@ -320,9 +251,6 @@
 export default {
   head() {
     return {
-      bodyAttrs: {
-        class: 'ps-page ps-page-startpage'
-      },
       title: 'Purspot startpage',
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
@@ -355,8 +283,8 @@ export default {
   data() {
     return {
       search: '',
-      merchants: this.$store.getters.getMerchants,
-      ps: this.$store.getters.getPs,
+      merchants: this.$store.getters.getMerchantList,
+      ps: this.$store.getters.getAppDefaults,
     };
   },
   computed: {
@@ -369,9 +297,19 @@ export default {
 
   methods: {
     setMerch(m) {
-      console.log('setMerch -> ' + m);
-      this.$store.dispatch("setMerch", m);
+      this.$store.dispatch("setMerchant", m);
     },
+    setMode(m) {
+      this.$store.dispatch("setAppMode", m);
+    },
+    setEntry(m) {
+      this.$store.dispatch("setVisitorEntry", m);
+    },
+  },
+  mounted() {
+    // Startpage should always have Purpsot defaults
+    this.setMode('default')
+    this.setEntry('home')
   }
       
 }

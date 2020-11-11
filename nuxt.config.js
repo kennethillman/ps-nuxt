@@ -35,8 +35,14 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+     '@nuxtjs/axios', 
      '@nuxtjs/style-resources',
+     '@nuxtjs/svg-sprite',
   ],
+
+  axios: {
+    // proxy: true
+  },
 
   styleResources: {
     scss: [
@@ -44,9 +50,10 @@ export default {
     ]
   },
 
-  // svgSprite: {
-  //   input: '~/assets/icons/'
-  // },
+  svgSprite: {
+    input: '~/assets/icons/',
+    elementClass: 'ps-icon'
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -58,8 +65,14 @@ export default {
     // Makes an external css file
     extractCSS:  true,
 
+
+
     extend(config, ctx) {
-      config.resolve.alias['vue'] = 'vue/dist/vue.common'
+      config.node = {
+        fs: 'empty',
+        path: 'empty',
+      }
+      config.resolve.alias['vue'] = 'vue/dist/vue.common';
     }
   }
 }

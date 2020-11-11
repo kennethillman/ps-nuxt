@@ -9,7 +9,7 @@
             "vars":{
                "default":{
                   "skin":"#ffffff",
-                  "skinBg":"linear-gradient(#fff, #fff 34vh, #e9e9e9 90vh)",
+                  "skinBg":"linear-gradient(#fff, #fff 34%, #f9f9f9 90%)",
                   "link":"#99bd48",
                   "btnText":"#ffffff"
                },

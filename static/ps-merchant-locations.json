@@ -1,0 +1,38 @@
+[
+   {
+      "id":"a9da70b5-a3c0-4bcd-aa58-6aab2fdf3262",
+      "name":"HaYo Location",
+      "description":null,
+      "address":"Storgatan 1",
+      "postal":"123 45",
+      "city":"Stockholm",
+      "telephone":"08 - 123 456",
+      "email":null,
+      "longitude":1806,
+      "latitude":5933,
+      "mapIcon":"https://purspot.com/Content/images/map/marker-festival.png",
+      "imageUrl":"https://purspotdev.blob.core.windows.net/files/98df4e58-4850-41e5-92a7-2e59e597f60c",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "openingHours":"{\"Monday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":19,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Tuesday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":19,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Wednesday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":19,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Thursday\":{\"From\":{\"Hour\":7,\"Minute\":0},\"To\":{\"Hour\":19,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Friday\":{\"From\":{\"Hour\":1,\"Minute\":0},\"To\":{\"Hour\":21,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Saturday\":{\"From\":{\"Hour\":9,\"Minute\":0},\"To\":{\"Hour\":21,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Sunday\":{\"From\":{\"Hour\":9,\"Minute\":0},\"To\":{\"Hour\":19,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}}}",
+      "orderHours":"{\"Monday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Tuesday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":0,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Wednesday\":{\"From\":{\"Hour\":0,\"Minute\":0},\"To\":{\"Hour\":0,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Thursday\":{\"From\":{\"Hour\":8,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Friday\":{\"From\":{\"Hour\":1,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Saturday\":{\"From\":{\"Hour\":1,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":12,\"Minute\":0},\"ClosedTo\":{\"Hour\":15,\"Minute\":0}},\"Sunday\":{\"From\":{\"Hour\":7,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":12,\"Minute\":0},\"ClosedTo\":{\"Hour\":15,\"Minute\":0}}}"
+   },
+   {
+      "id":"39becb7c-5975-487d-9745-e71d34b1bade",
+      "name":"HaYo Location 2",
+      "description":null,
+      "address":"Storgatan 1",
+      "postal":"123 45",
+      "city":"Stockholm",
+      "telephone":null,
+      "email":null,
+      "longitude":18,
+      "latitude":59.3,
+      "mapIcon":"https://purspot.com/Content/images/map/marker-festival.png",
+      "imageUrl":"https://purspotdev.blob.core.windows.net/files/fe8007b3-c908-4dd5-ba93-d7e012c4614a",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "openingHours":"{\"Monday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Tuesday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Wednesday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Thursday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Friday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Saturday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Sunday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}}}",
+      "orderHours":"{\"Monday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Tuesday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Wednesday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Thursday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Friday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Saturday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}},\"Sunday\":{\"From\":{\"Hour\":23,\"Minute\":0},\"To\":{\"Hour\":23,\"Minute\":0},\"UseClosed\":false,\"ClosedFrom\":{\"Hour\":0,\"Minute\":0},\"ClosedTo\":{\"Hour\":0,\"Minute\":0}}}"
+   }
+]

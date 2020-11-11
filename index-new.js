@@ -15,21 +15,20 @@ export const state = () => ({
 
   appDefaults: false,       // Api ( Purspust PS )
   appMode: 'default',       // default, dark, light
-  appMenuOpen: false,       // -> Bool
   appShowModal: false,      // -> Bool
   appTermsAccepted: false,  // -> Bool (like special terms for buying tickets)
   appLockBodyScroll: false, // -> Bool 
   appNotify: false,         // -> Bool 
   appToken: null,           // -> Bool 
 
-  groupList: false,         // Api -> ?  
+  groupList: false,        // Api -> ?  
 
   merchantList: false,      // Api
   merchant: false,          // Api
 
   location: false,          // Api
   locationType: false,      // restaurant, shop, ticket ...
-  locationDelivery: 'pay',  // Fetch "5" , Recive "5", Delivery "5",  Pay "4" )
+  locationDelivery: false  // Fetch "5" (Hämta), Recive "5" (merchants lämnar eller elevererar, Pay "4" (kvitto) )
 
 
 })
@@ -59,9 +58,6 @@ export const mutations = {
 
   setAppDefaults(state, d) {
     state.appDefaults = d
-  },
-  setAppMenuOpen(state, d) {
-    state.appMenuOpen = d
   },
   setAppMode(state, d) {
     state.appMode = d
@@ -119,72 +115,71 @@ export const actions = {
     //.then(response => response.json())
     //commit('setToken', psm)
 
-    commit('setMerchantList', psTempMerchantsData)
-    commit('setAppDefaults', psTempData)
+    commit('setMerchants', psTempMerchantsData)
+    commit('appDefaults', psTempData)
 
   },
 
   setVisitorEntry(vuexContext, state) {
-    vuexContext.commit('setVisitorEntry', state)
+    vuexContext.commit('setVisitorEntry', step)
   },
   setVisitorActiveStep(vuexContext, state) {
-    vuexContext.commit('setVisitorActiveStep', state)
+    vuexContext.commit('setVisitorActiveStep', step)
   },
   setVisitorCookie(vuexContext, state) {
-    vuexContext.commit('setVisitorCookie', state)
+    vuexContext.commit('setVisitorCookie', step)
   },
-
+  setVisitorCookie(vuexContext, state) {
+    vuexContext.commit('setVisitorCookie', step)
+  },
   setVisitorOrder(vuexContext, state) {
-    vuexContext.commit('setVisitorOrder', state)
+    vuexContext.commit('setVisitorOrder', step)
   },
   setVisitorOrderToken(vuexContext, state) {
-    vuexContext.commit('setVisitorOrderToken', state)
+    vuexContext.commit('setVisitorOrderToken', step)
   },
 
   setAppDefaults(vuexContext, state) {
-    vuexContext.commit('setAppDefaults', state)
+    vuexContext.commit('setAppDefaults', step)
   },
-  setAppMenuOpen(vuexContext, state) {
-    vuexContext.commit('setAppMenuOpen', state)
-  },
-    setAppMode(vuexContext, state) {
-    vuexContext.commit('setAppMode', state)
+  setAppMode(vuexContext, state) {
+    vuexContext.commit('setAppMode', step)
   },
   setAppShowModal(vuexContext, state) {
-    vuexContext.commit('setAppShowModal', state)
+    vuexContext.commit('setAppShowModal', step)
   },
   setAppTermsAccepted(vuexContext, state) {
-    vuexContext.commit('setaAppTermsAccepted', state)
+    vuexContext.commit('setaAppTermsAccepted', step)
   },
   setAppLockBodyScroll(vuexContext, state) {
-    vuexContext.commit('setAppLockBodyScroll', state)
+    vuexContext.commit('setAppLockBodyScroll', step)
   },
   setAppNotify(vuexContext, state) {
-    vuexContext.commit('setAppNotify', state)
+    vuexContext.commit('setAppNotify', step)
   },
   setAppToken(vuexContext, state) {
-    vuexContext.commit('setAppToken', state)
+    vuexContext.commit('setAppToken', step)
   },
 
   setGroupList(vuexContext, state) {
-    vuexContext.commit('setGroupList', state)
+    vuexContext.commit('setGroupList', step)
   },
 
   setMerchantList(vuexContext, state) {
-    vuexContext.commit('setMerchantList', state)
+    vuexContext.commit('setMerchantList', step)
   },
   setMerchant(vuexContext, state) {
-    vuexContext.commit('setMerchant', state)
+    vuexContext.commit('setMerchant', step)
   },
 
   setLocation(vuexContext, state) {
-    vuexContext.commit('setLocation', state)
+    vuexContext.commit('setLocation', step)
   },
   setLocationType(vuexContext, state) {
-    vuexContext.commit('setLocationType', state)
+    vuexContext.commit('setLocationType', step)
   },
   setLocationDelivery(vuexContext, state) {
-    vuexContext.commit('setLocationDelivery', state)
+    vuexContext.commit('setLocationDelivery', step)
   }
 
 }
@@ -218,9 +213,6 @@ export const getters = {
   },
   getAppMode(state) {
     return state.appMode
-  },
-  getAppMenuOpen(state) {
-    return state.appMenuOpen
   },
   getAppShowModal(state) {
     return state.appShowModal

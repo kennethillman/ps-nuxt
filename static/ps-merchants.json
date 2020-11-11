@@ -1,6 +1,6 @@
 [
    {
-      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Olearys",
       "name":"Mall of Scandinavia",
       "nameShort":"MoS",
@@ -29,7 +29,7 @@
       }
    },
    {
-      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Indian Garden",
       "name":"Mall of Scandinavia",
       "nameShort":"MoS",
@@ -52,13 +52,14 @@
             "colors":{
                "skin":"#040707",
                "link":"#c7a43a",
+               
                "btnText":"#ffffff"
             }
          }
       }
    },
    {
-      "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Turbo",
       "name":"Uppsala",
       "nameShort":"Uppsala",
@@ -87,7 +88,7 @@
       }
    },
    {
-   "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+   "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Light",
       "name":"Light",
       "nameShort":"Light",
@@ -108,13 +109,15 @@
          "mode":"light",
          "vars":{
             "colors":{
-               "skin":"#eee"
+               "skin":"#eee",
+               "link":"#99bd48",
+               "btnText":"#ffffff"
             }
          }
       }
    },
    {
-   "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+   "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Dark",
       "name":"Dark",
       "nameShort":"Dark",
@@ -135,13 +138,15 @@
          "mode":"dark",
          "vars":{
             "colors":{
-               "skin":"#444"
+               "skin":"#444",
+               "link":"#99bd48",
+               "btnText":"#fff"
             }
          }
       }
    },
    {
-     "id":"9fea1e2e-50a0-478f-acb0-c22a3b3a000c",
+     "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
       "group":"Default",
       "name":"Default",
       "nameShort":"Default",
@@ -162,184 +167,14 @@
          "mode":"default",
          "vars":{
             "colors":{
-               "skin":"#fff"
-            }
-         }
-      }
-   },
-
-   {
-      "id":"ps-0000-olea",
-      "group":"Olearys",
-      "name":"Kista",
-      "nameShort":"Kista",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#2b9c86",
-               "link":"#fbdb50",
-               "btnText":"#4b4118"
-            }
-         }
-      }
-   },
-   {
-      "id":"ps-0000-indg",
-      "group":"Indian Garden",
-      "name":"Västmannagatan",
-      "nameShort":"Västmanna..",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#040707",
-               "link":"#c7a43a",
-               "btnText":"#ffffff"
-            }
-         }
-      }
-   },
-   {
-      "id":"ps-0000-turb",
-      "group":"Turbo",
-      "name":"Västerås",
-      "nameShort":"Västerås",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#17407d",
-               "link":"#dd383",
-               "btnText":"#ffffff"
-            }
-         }
-      }
-   },
-   {
-   "id":"ps-0000-light",
-      "group":"Light",
-      "name":"Light 2",
-      "nameShort":"Light 2",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"light",
-         "vars":{
-            "colors":{
-               "skin":"#eee"
-            }
-         }
-      }
-   },
-   {
-   "id":"ps-0000-dark",
-      "group":"Dark",
-      "name":"Dark 2",
-      "nameShort":"Dark 2",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#444",
+               "skin":"#fff",
                "link":"#99bd48",
-               "btnText":"#ffffff"
-            }
-         }
-      }
-   },
-   {
-   "id":"ps-0000-defa",
-      "group":"Default",
-      "name":"Default 2",
-      "nameShort":"Def 2",
-      "address":"Stjärntorget 2 ",
-      "postal":"169 79",
-      "city":"Solna",
-      "telephone":"0707123456",
-      "email":null,
-      "longitude":0,
-      "latitude":0,
-      "mapIcon":"",
-      "description":null,
-      "imageUrl":"",
-      "bgUrl":"",
-      "visibleOnMap":true,
-      "visibleOnList":true,
-      "skin":{
-         "mode":"default",
-         "vars":{
-            "colors":{
-               "skin":"#ffffff",
-               "link":"#99bd48",
-               "btnText":"#ffffff"
+               "btnText":"#fff"
             }
          }
       }
    }
+   
 
 
 ]

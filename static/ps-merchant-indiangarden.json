@@ -1,0 +1,31 @@
+[
+   {
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
+      "group":"Indian Garden",
+      "name":"Mall of Scandinavia",
+      "nameShort":"MoS",
+      "address":"Stjärntorget 2 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":"indiangarden.png",
+      "bgUrl":"",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "skin":{
+         "mode":"dark",
+         "vars":{
+            "colors":{
+               "skin":"#040707",
+               "link":"#c7a43a",
+               "btnText":"#ffffff"
+            }
+         }
+      }
+   }
+]
