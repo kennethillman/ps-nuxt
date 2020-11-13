@@ -1,6 +1,6 @@
 // Temp - Mock Api req
 import psTempData from '~/static/ps.json';
-import psTempMerchantsData from '~/static/ps-merchants.json';
+import psTempMerchantsData from '~/static/ps-merchants-latest.json';
 
 
 // STATE
@@ -115,11 +115,11 @@ export const actions = {
 
     // console.log(context);
 
-    //const psm = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/merchants')
-    //.then(response => response.json())
-    //commit('setToken', psm)
+    const apiMerchants = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/merchants')
+    .then(response => response.json())
+    commit('setAppToken', apiMerchants)
 
-    commit('setMerchantList', psTempMerchantsData)
+    commit('setMerchantList', apiMerchants)
     commit('setAppDefaults', psTempData)
 
   },
@@ -147,7 +147,7 @@ export const actions = {
   setAppMenuOpen(vuexContext, state) {
     vuexContext.commit('setAppMenuOpen', state)
   },
-    setAppMode(vuexContext, state) {
+  setAppMode(vuexContext, state) {
     vuexContext.commit('setAppMode', state)
   },
   setAppShowModal(vuexContext, state) {

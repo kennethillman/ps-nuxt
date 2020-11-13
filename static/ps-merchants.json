@@ -4,7 +4,7 @@
       "group":"Olearys",
       "name":"Mall of Scandinavia",
       "nameShort":"MoS",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -14,26 +14,61 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"olearys.png",
-      "bgUrl":"",
+      "bgImageOverlay": true,
+      "bgImageUrl":"olearys-bg.jpg",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#2b9c86",
-               "link":"#fbdb50",
-               "btnText":"#4b4118"
+      "customStyling": {
+         "skin":{
+            "mode":"dark",
+            "vars":{
+               "colors":{
+                  "skin":"#2b9c86",
+                  "link":"#fbdb50",
+                  "btnText":"#4b4118"
+               }
             }
-         }
+         }         
       }
    },
    {
       "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
-      "group":"Indian Garden",
+      "group":"Olearys",
+      "name":"Kista",
+      "nameShort":"Kista",
+      "address":"Storgatan 67 ",
+      "postal":"169 79",
+      "city":"Solna",
+      "telephone":"0707123456",
+      "email":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"",
+      "description":null,
+      "imageUrl":null,
+      "bgImageOverlay": false,
+      "bgImageUrl": null,
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "customStyling": {
+         "skin":{
+            "mode":"dark",
+            "vars":{
+               "colors":{
+                  "skin":"#2b9c86",
+                  "link":"#fbdb50",
+                  "btnText":"#4b4118"
+               }
+            }
+         }         
+      }
+   },
+   {
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
+      "group": "",
       "name":"Mall of Scandinavia",
       "nameShort":"MoS",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -43,27 +78,29 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"indiangarden.png",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"indiangardejpgg.png",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#040707",
-               "link":"#c7a43a",
-               
-               "btnText":"#ffffff"
+      "customStyling": {
+          "skin":{
+            "mode":"dark",
+            "vars":{
+               "colors":{
+                  "skin":"#040707",
+                  "link":"#c7a43a",
+                  "btnText":"#ffffff"
+               }
             }
-         }
+         }        
       }
    },
    {
       "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
-      "group":"Turbo",
+      "group": "",
       "name":"Uppsala",
       "nameShort":"Uppsala",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -73,26 +110,29 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"turbo.png",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#17407d",
-               "link":"#dd3832",
-               "btnText":"#fff"
+      "customStyling": {
+         "skin":{
+            "mode":"dark",
+            "vars":{
+               "colors":{
+                  "skin":"#17407d",
+                  "link":"#dd3832",
+                  "btnText":"#fff"
+               }
             }
-         }
+         }         
       }
    },
    {
-   "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
-      "group":"Light",
-      "name":"Light",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
+      "group": "",
+      "name":"Light skin",
       "nameShort":"Light",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -102,26 +142,29 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"light",
-         "vars":{
-            "colors":{
-               "skin":"#eee",
-               "link":"#99bd48",
-               "btnText":"#ffffff"
+      "customStyling": {
+         "skin":{
+            "mode":"light",
+            "vars":{
+               "colors":{
+                  "skin":"#eee",
+                  "link":"#99bd48",
+                  "btnText":"#ffffff"
+               }
             }
          }
       }
    },
    {
-   "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
-      "group":"Dark",
-      "name":"Dark",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
+      "group": "",
+      "name":"Dark skin",
       "nameShort":"Dark",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -131,26 +174,29 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"dark",
-         "vars":{
-            "colors":{
-               "skin":"#444",
-               "link":"#99bd48",
-               "btnText":"#fff"
+      "customStyling": {
+         "skin":{
+            "mode":"dark",
+            "vars":{
+               "colors":{
+                  "skin":"#444",
+                  "link":"#99bd48",
+                  "btnText":"#fff"
+               }
             }
-         }
+         }  
       }
    },
    {
-     "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
-      "group":"Default",
-      "name":"Default",
+      "id":"52d6a89f-b4ef-4842-afc3-9579f1f1c960",
+      "group": "",
+      "name":"Default skin",
       "nameShort":"Default",
-      "address":"Stjärntorget 2 ",
+      "address":"Storgatan 67 ",
       "postal":"169 79",
       "city":"Solna",
       "telephone":"0707123456",
@@ -160,21 +206,22 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
-      "skin":{
-         "mode":"default",
-         "vars":{
-            "colors":{
-               "skin":"#fff",
-               "link":"#99bd48",
-               "btnText":"#fff"
+      "customStyling": {
+         "skin":{
+            "mode":"default",
+            "vars":{
+               "colors":{
+                  "skin":"#fff",
+                  "link":"#99bd48",
+                  "btnText":"#fff"
+               }
             }
-         }
+         }  
       }
    }
    
-
-
 ]

@@ -66,6 +66,7 @@
 		padding: 16px 16px 8px;
 		.ps-btn {
 			margin-bottom: 0;
+			color: $white;
 			background: $black;
 			border-color: $black;
 			@include VP480 {

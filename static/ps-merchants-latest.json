@@ -1,0 +1,41 @@
+[
+   {
+      "id":"07fafd2c-6869-40e3-8019-010451f56043",
+      "name":"Demo 1",
+      "address":null,
+      "postal":null,
+      "city":null,
+      "telephone":null,
+      "email":null,
+      "description":null,
+      "longitude":0,
+      "latitude":0,
+      "mapIcon":"https://purspot.com/Content/images/map/marker-restaurant.png",
+      "imageUrl":"olearys.png",
+      "visibleOnMap":true,
+      "visibleOnList":true,
+      "customStyling":
+            {
+                  "bgImageOverlay": null,
+                  "bgImageUrl":"olearys-bg.jpg",
+                  "styling": {                   
+                        "skin":{                   
+                              "mode":"dark",                   
+                              "vars":{                       
+                                    "colors":{                       
+                                       "skin":"#2b9c86",
+                                       "link":"#fbdb50",
+                                       "btnText":"#4b4118"                  
+                              }               
+                        }           
+                  }       
+            }
+      },
+      "merchantLocations":[
+         
+      ],
+      "merchantPaymentMethods":[
+         
+      ]
+   }
+]

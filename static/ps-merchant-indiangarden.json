@@ -14,7 +14,8 @@
       "mapIcon":"",
       "description":null,
       "imageUrl":"indiangarden.png",
-      "bgUrl":"",
+      "bgImageOverlay": false,
+      "bgImageUrl":"",
       "visibleOnMap":true,
       "visibleOnList":true,
       "skin":{
