@@ -4,7 +4,7 @@
   <div class="cookie-body ">
 
     <div class="cookie-text">
-      <h2 class="header">Din intergitet</h2>
+      <h2 class="header">Cookies</h2>
       <p>Denna webbsida använder cookies för att din användarupplevelse ska bli så bra som möjligt.</p>
     <a href="">Läs mer om cookies här </a>
     </div>
