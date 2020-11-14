@@ -38,6 +38,7 @@ export default {
      '@nuxtjs/axios', 
      '@nuxtjs/style-resources',
      '@nuxtjs/svg-sprite',
+     '@nuxtjs/toast',
   ],
 
   axios: {
@@ -53,6 +54,11 @@ export default {
   svgSprite: {
     input: '~/assets/icons/',
     elementClass: 'ps-icon'
+  },
+
+  toast: {
+      position: 'bottom-center',
+      duration: 1375
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
