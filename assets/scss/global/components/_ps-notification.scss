@@ -63,43 +63,7 @@ a.temp  {
 	}
 
 
-@keyframes scale-i{
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  40% {
-    opacity: .175;
-  }
-  
-  100% {
-    transform: scale(2.4);
-    opacity: 0;
-    
-  }
-}
 
-@keyframes scale-text {
-  0% {
-    opacity: .675;
-
-
-  }
-  
-  33% {
-    opacity: 1;
-  }
-
-  66% {
-    opacity: 1;
-  }
-  
-  100% {
-    opacity: .675;
-    
-  }
-}
 
 
 
@@ -109,10 +73,6 @@ a.temp  {
 		position: relative;
 		z-index: 9;
 		color: var(--ps-btn-txt);
-
-		> div {
-			//animation: scale-text 2.4s infinite 0s;
-		}
 
 		i {
 			border-radius: 100%;

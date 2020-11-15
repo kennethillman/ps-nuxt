@@ -8,7 +8,7 @@ import psTempMerchantsData from '~/static/ps-merchants-latest.json';
 export const state = () => ({
   
   visitorEntry: false,      // home, group, merchant, location
-  visitorActiveStep: 1,     // 4-5 steps  
+  visitorActiveStep: 1,      
   vistorCookie: false,      // -> Bool -> Get from with local storage
   visitorOrder: false, 
   visitorOrderToken: false,
@@ -31,6 +31,12 @@ export const state = () => ({
   locationType: false,      // restaurant, shop, ticket ...
   locationDelivery: 'pay',  // Fetch "5" , Recive "5", Delivery "5",  Pay "4" )
 
+  cart: [],
+  cartCount: 0, 
+  cartCode: false, 
+  cartDisabled: true,
+  cartTotal: 0,
+
 
 })
 
@@ -38,6 +44,35 @@ export const state = () => ({
 // MUTATIONS
 
 export const mutations = {
+  addToCart(state, item) {
+
+    
+
+    let found = state.cart.find(product => product.id == item.id);
+
+    if (found) {
+        found.quantity ++;
+        found.totalPrice = found.quantity * found.price;
+    } else {
+        
+        state.cart.push(item);
+
+        // Vue.set(item, 'quantity', 1);
+        // Vue.set(item, 'totalPrice', item.price);
+    }
+
+    state.cartCount++;
+  },
+  removeFromCart(state, item) {
+    let index = state.cart.indexOf(item);
+
+    if (index > -1) {
+        let product = state.cart[index];
+        state.cartCount -= product.quantity;
+
+        state.cart.splice(index, 1);
+    }
+  },
   setVisitorEntry(state, d) {
     state.visitorEntry = d
   },
@@ -101,7 +136,22 @@ export const mutations = {
   },
   setLocationDelivery(state, d) {
     state.locationDelivery = d
+  },
+  
+  setCartDisabled(state, d) {
+    state.cartDisabled = d
+  },
+  setCartTotal(state, d) {
+    state.cartTotal = d
+  },
+  setCartCode(state, d) {
+    state.cartCode = d
+  },
+  setCartCount(state, d) {
+    state.cartCount = d
   }
+
+
 
 
 }
@@ -123,7 +173,12 @@ export const actions = {
     commit('setAppDefaults', psTempData)
 
   },
-
+  addToCart(vuexContext, state) {
+    vuexContext.commit('addToCart', state)
+  },
+  removeFromCart(vuexContext, state) {
+    vuexContext.commit('removeFromCart', state)
+  },
   setVisitorEntry(vuexContext, state) {
     vuexContext.commit('setVisitorEntry', state)
   },
@@ -185,6 +240,19 @@ export const actions = {
   },
   setLocationDelivery(vuexContext, state) {
     vuexContext.commit('setLocationDelivery', state)
+  },
+  
+  setCartDisabled(vuexContext, state) {
+    vuexContext.commit('setCartDisabled', state)
+  },
+  setCartTotal(vuexContext, state) {
+    vuexContext.commit('setCartTotal', state)
+  },
+  setCartCode(vuexContext, state) {
+    vuexContext.commit('setCartCode', state)
+  },
+  setCartCount(vuexContext, state) {
+    vuexContext.commit('setCartCount', state)
   }
 
 }
@@ -257,6 +325,21 @@ export const getters = {
   },
   getLocationDelivery(state) {
     return state.locationDelivery
+  },
+  getCartDisabled(state) {
+    return state.cartDisabled
+  },
+  getCartTotal(state) {
+    return state.cartTotal
+  },
+  getCartCode(state) {
+    return state.cartCode
+  },
+  getCart(state) {
+    return state.cart
+  },
+  getCartCount(state) {
+    return state.cartCount
   }
 
 

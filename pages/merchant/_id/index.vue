@@ -223,6 +223,12 @@ export default {
     },
   },
   mounted() {
+
+    // Update active step
+    this.$store.dispatch("setVisitorActiveStep", 1);
+
+    // Make Cart Disabled
+    this.$store.dispatch("setCartDisabled", true); 
     
     // Set mode
     this.setMode(this.merchant.customStyling.styling.skin.mode)  

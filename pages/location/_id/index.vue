@@ -179,65 +179,19 @@
 
                           <div class="ps-accordion-products">
                             <div class="ps-products">
-                                                         <div class="ps-product " v-for="productVariant of product.productVariants"  @click="addToBasket(product.id)" :class="{'-no-image' : !product.imageUrl}">
-                            <figure class="image" v-if="product.imageUrl">
-                              <img :src="product.imageUrl">
-                            </figure>
-                                    
-                              <div class="text">
-                                  <h5 class="title">{{product.partnerProductNr}} {{product.name}}</h5>
-                                  <h5 class="desc">{{product.description}}&nbsp;</h5>
-
-                                  <div class="price-quantity">
-
-                                      <div class="price">
-                                          {{product.price}} SEK
-                                      </div>
-
-                                      <div class="quantity ">
-                                          <button class="ps-btn -round -small"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 9h24v6h-24z"></path></svg></button>
-                                          <div class="sum">0</div>
-                                          <button class="ps-btn -round -small"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"></path></svg></button>
-                                      </div>
-
-                                  </div>
-                              </div>
-                        </div>
-
+                              <template v-for="prod of product.productVariants">
+                                  <!-- product here -->
+                                  <Product :product="prod" />
+                              </template>
                             </div>
                           </div>
-
-
 
                         </div>
                     </template>
 
                     <!-- --- PRODUCT - IF NO sub products -->
                     <template v-else>
-                      <div class="ps-product " @click="addToBasket(product.id)" :class="{'-no-image' : !product.imageUrl}">
-                          <figure class="image" v-if="product.imageUrl">
-                            <img :src="product.imageUrl">
-                          </figure>
-                                  
-                            <div class="text">
-                                <h5 class="title">{{product.partnerProductNr}} {{product.name}}</h5>
-                                <h5 class="desc">{{product.description}}&nbsp;</h5>
-
-                                <div class="price-quantity">
-
-                                    <div class="price">
-                                        {{product.price}} SEK
-                                    </div>
-
-                                    <div class="quantity ">
-                                        <button class="ps-btn -round -small"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 9h24v6h-24z"></path></svg></button>
-                                        <div class="sum">0</div>
-                                        <button class="ps-btn -round -small"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z"></path></svg></button>
-                                    </div>
-
-                                </div>
-                            </div>
-                      </div>
+                      <Product :product="product" />
                     </template>
                    
                   </template>
@@ -253,7 +207,7 @@
         
       </div>
 
-      <br><br><br><br>
+
 
 
 
@@ -311,14 +265,6 @@ export default {
 
   },
 
-  // Ki -> Slow - Make page blink
-  // async asyncData({ $axios, params }) {
-  //   const d = await $axios.$get('https://purspotapi-dev.azurewebsites.net/api/shop/merchant/' + params.id)
-  //   return { merchant: d  }
-  // },
-
-
-
   head () {
     return {
 
@@ -347,19 +293,6 @@ export default {
   },
 
   methods: {
-    addToBasket(productId) {
-      // alertify.success('Added ' + productId);
-      this.$toast.success('Added ' + productId)
-      console.log(productId)
-      if(undefined === this.basketLines[productId]) {
-        let p =
-        {
-          'productId': productId,
-          'quantity': 1
-        };
-        this.basketLines.push(p);
-      }
-    },
     postBasket(){
       let postData =
       {
@@ -367,57 +300,39 @@ export default {
       };
       
       let url = apiUrl + '/api/shop/createorder/' + this.$route.params.id;
+
       axios.post(url, postData).then(response => {
         console.log(response.data);
         alertify.success('Basket saved to db: ' + response.data);
         this.$router.push('/checkout/' + response.data.orderId);
       });
     },
-
-    setMerchant(m) {
-      this.$store.dispatch("setMerchant", m);
-    },
-    setMode(m) {
-      this.$store.dispatch("setAppMode", m);
-    },
-    setEntry(m) {
-      this.$store.dispatch("setVisitorEntry", m);
-    },
-
     accordionGroupToggle (event) {
-
       let el = event.target;
-
-        console.log(' atoggle -> ' , el.closest('.ps-accordion-group'))
-
- 
-        el.closest('.ps-accordion-group').classList.toggle('-open-group');
-  
-
-    // let el = document.getElementsByClassName("js-temp-accordion");
-
-    // for (var i = 0; i < el.length; i++) {
-    //     el[i].addEventListener('click', accordion, false);
-    // }
+      el.closest('.ps-accordion-group').classList.toggle('-open-group');
     }
   },
   mounted() {
+
+    // Update active step
+    this.$store.dispatch("setVisitorActiveStep", 2);
     
+    // Make Cart Enabled
+    this.$store.dispatch("setCartDisabled", false); 
+
     // Set mode
-    this.setMode(this.location.merchant.customStyling.styling.skin.mode)  
+    this.$store.dispatch("setAppMode", this.location.merchant.customStyling.styling.skin.mode);  
 
     // Set merchnat in VUEX if not defind before
     if(!this.$store.getters.getMerchant) {
-      this.setMerchant(this.location.merchant)
+      this.$store.dispatch("setMerchant", this.location.merchant);
     }
     
     // Set entry
     if(!this.$store.getters.getVisitorEntry) {
-      this.setEntry('location')  
+      this.$store.dispatch("setVisitorEntry", 'location');
     }
 
-   
-    
   }
 
 

@@ -1,0 +1,109 @@
+<template>
+
+  <div class="ps-product" :class="{'-no-image' : !product.imageUrl}">
+        <figure class="image" v-if="product.imageUrl">
+          <img :src="product.imageUrl">
+        </figure>
+                
+          <div class="text">
+              <h5 class="title">{{product.partnerProductNr}} {{product.name}}</h5>
+              <h5 class="desc">{{product.description}}&nbsp;</h5>
+
+              <div class="price-quantity">
+
+                  <div class="price">
+                      {{product.price}} SEK
+                  </div>
+
+                  <div class="quantity ">
+                      <button class="ps-btn -round -small" :disabled="itemCount === 0"
+                        :class="{'-disabled' : itemCount === 0}"
+                        @click="removeFromBasket(product.id,product.price)"><svg-icon name="minus" /></button>
+                      <div class="sum">{{itemCount}}</div>
+                      <button class="ps-btn -round -small"  @click="addToBasket(product.id,product.price)"><svg-icon name="plus" /></button>
+                  </div>
+
+              </div>
+          </div>
+    </div>
+
+</template>
+
+
+<script>
+
+  export default {
+    props:[
+      'product'
+    ],
+    data(){
+      return {
+        itemCount: 0
+      }
+    },
+    methods: {
+      addToBasket(productId, productPrice) {
+
+        let totalItems = this.$store.getters.getCartCount + 1;
+        let totalPrice = this.$store.getters.getCartTotal + productPrice;
+
+        this.itemCount ++;
+        this.$store.dispatch('setCartCount', totalItems);
+        this.$store.dispatch('setCartTotal', totalPrice);
+
+        //this.$toast.success('Added ' + productId)
+
+       
+
+        // if(undefined === this.basketLines[productId]) {
+        //   let p =
+        //   {
+        //     'productId': productId,
+        //     'quantity': 1
+        //   };
+
+
+
+
+        //  this.$store.dispatch('addToCart', p);
+        //  this.basketLines.push(p);
+
+
+        //
+      },
+      removeFromBasket(productId, productPrice) {
+
+       // this.$toast.error('Removed ' + productId)
+        let totalItems, totalPrice = this.$store.getters.getCartTotal - productPrice;
+        this.itemCount --;
+
+        if(this.itemCount < 0){
+          this.itemCount = 0;
+          this.$store.dispatch('setCartTotal', 0);
+        } else {
+          totalItems = this.$store.getters.getCartCount - 1;
+          this.$store.dispatch('setCartCount', totalItems);
+          this.$store.dispatch('setCartTotal', totalPrice);
+        }
+
+
+       
+       
+        //if(undefined === this.basketLines[productId]) {
+          // let p =
+          // {
+          //   'productId': productId,
+          //   'quantity': 1
+          // };
+
+        //  this.$store.dispatch('removeFromCart', p);
+          //this.basketLines.push(p);
+        //}
+      }
+
+
+    }
+  
+  }
+  
+</script>

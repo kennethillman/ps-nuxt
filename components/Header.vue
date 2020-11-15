@@ -22,10 +22,10 @@
           <div class="box-steps ">
 
             <div v-for="(step, index) of steps" class="step" :key="index+'step'"
-            :class="{'-active': stepActive === index+1,'-done': stepActive >= index+2}"
+            :class="{'-active': $store.getters.getVisitorActiveStep === index+1,'-done': $store.getters.getVisitorActiveStep >= index+2}"
             >
 
-              <figure><span>{{step}}</span></figure>
+              <figure><span>{{step}} </span></figure>
               <div></div>
 
             </div>
@@ -69,7 +69,6 @@
   export default {
     data(){
       return {
-        stepActive: this.$store.getters.getVisitorActiveStep,
         stepType: this.$store.getters.getLocationDelivery,
         steps: []
       }
@@ -77,21 +76,21 @@
     methods: {
       toggleMenu: function(){
         this.isMenuOpen = !this.isMenuOpen;
-        this.$store.commit("setAppMenuOpen",this.isMenuOpen)
+        this.$store.dispatch("setAppMenuOpen",this.isMenuOpen);
       },
       closeMenu: function(){
-        this.$store.commit("setAppMenuOpen",false)
+        this.$store.dispatch("setAppMenuOpen",false);
       },
       setSteps: function(){
 
         if (this.stepType === "fetch") {
-          this.steps = ["Plats","Hämta","Betala","Bered.","Hämta"]
+          this.steps = ["Plats","Varor","Betala","Bered.","Hämta"]
         } else if (this.stepType === "recive")  {
-          this.steps = ["Plats","Hämta","Betala","Bered.","Vänta"]
+          this.steps = ["Plats","Varor","Betala","Bered.","Vänta"]
         } else if (this.stepType === "delivery")  {
-          this.steps = ["Plats","Hämta","Betala","Bered.","Leverans"]
+          this.steps = ["Plats","Varor","Betala","Bered.","Leverans"]
         } else if (this.stepType === "pay")  {
-          this.steps = ["Plats","Hämta","Betala","Kvitto"]
+          this.steps = ["Plats","Varor","Betala","Kvitto"]
         }
         
         

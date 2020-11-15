@@ -316,6 +316,10 @@ export default {
     },
   },
   mounted() {
+
+    // Update active step
+    this.$store.dispatch("setVisitorActiveStep", 1);
+
     // Startpage should always have Purpsot defaults
     this.setMode('default')
     this.setEntry('home')

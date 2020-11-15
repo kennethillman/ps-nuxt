@@ -41,7 +41,7 @@
 		}
 
 		&:active {
-			background-color: $gray-100; 
+			//background-color: $gray-100; 
 		}
 
 		.header {
@@ -87,7 +87,7 @@
 				fill: var(--ps-btn-txt);
 				height: 16px;
 				width: 16px;
-				margin: 0 0 0 2px;
+				margin: 0;
 				transform: rotate(90deg);
 			}
 		}
