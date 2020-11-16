@@ -92,14 +92,14 @@
 
 
 
-            <template v-if="merch.customStyling.bgImageUrl">
-  
-              <figure 
-                class="merchant-logo"
-                :style="{ background: merch.customStyling.styling.skin.vars.colors.skin}" 
-                @click="setMerch(merch)">
-                <img :src="require(`~/assets/logos/${merch.customStyling.bgImageUrl}`)" />
-              </figure>
+            <template v-if="merch.imageUrl">
+                <figure 
+                  class="merchant-logo"
+                  :style="{ background: merch.customStyling.styling.skin.vars.colors.skin}"
+                  @click="setMerch(merch)"
+                >
+                  <img :src="merch.imageUrl" />
+                </figure>
             </template> 
             <template v-else>
 
@@ -333,6 +333,8 @@ export default {
     },
   },
   mounted() {
+
+        console.log(this.merchants)
 
     // Update active step
     this.$store.dispatch("setVisitorActiveStep", 1);

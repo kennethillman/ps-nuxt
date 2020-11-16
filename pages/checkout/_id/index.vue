@@ -121,6 +121,11 @@ export default {
 
 
 
+  // async asyncData({ $axios }) {
+  //   const test = await $axios.$get('http://icanhazip.com')
+  //   return { test }
+  // },
+
 
   head () {
     return {
@@ -136,9 +141,9 @@ export default {
       console.log('Pay -> ' + id);
       let postData = {};
       let url = 'https://purspotapi-dev.azurewebsites.net/api/shop/pay/' + this.$route.params.id;
-      this.$axios.post(url, postData).then(response => {
+      this.$axios.get(url, postData).then(response => {
         console.log(response.data);
-        this.$router.push('/receipt/' + response.data.orderId);
+        //this.$router.push('/receipt/' + response.data.orderId);
       });
     }
 

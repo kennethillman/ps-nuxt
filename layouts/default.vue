@@ -1,13 +1,7 @@
 <template>
   <div>
 
-    <div class="purspot" 
-    :class="{
-      '-mode-default': this.$store.getters.getAppMode === 'default',
-      '-mode-dark': this.$store.getters.getAppMode === 'dark',
-      '-mode-light': this.$store.getters.getAppMode === 'light',
-      '-open-menu': this.$store.getters.getAppMenuOpen === true
-    }">
+    <div class="purspot">
         <Header /> 
         <Nuxt />
      <!--    <Cookie /> -->
@@ -18,4 +12,16 @@
 
 
 
+<script>
 
+export default {
+  head() {
+    return {
+      bodyAttrs: {
+        class: `-mode-${this.$store.getters.getAppMode}`
+      }
+    }
+  }
+}
+
+</script>
