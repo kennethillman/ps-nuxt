@@ -47,32 +47,30 @@ export const state = () => ({
 export const mutations = {
   addToCart(state, item) {
 
-    
+    // let found = state.cart.find(product => product.id == item.id);
 
-    let found = state.cart.find(product => product.id == item.id);
-
-    if (found) {
-        found.quantity ++;
-        found.totalPrice = found.quantity * found.price;
-    } else {
+    // if (found) {
+    //     found.quantity ++;
+    //     found.totalPrice = found.quantity * found.price;
+    // } else {
         
-        state.cart.push(item);
+    //     state.cart.push(item);
 
-        // Vue.set(item, 'quantity', 1);
-        // Vue.set(item, 'totalPrice', item.price);
-    }
+    //     // Vue.set(item, 'quantity', 1);
+    //     // Vue.set(item, 'totalPrice', item.price);
+    // }
 
-    state.cartCount++;
+    // state.cartCount++;
   },
   removeFromCart(state, item) {
-    let index = state.cart.indexOf(item);
+    // let index = state.cart.indexOf(item);
 
-    if (index > -1) {
-        let product = state.cart[index];
-        state.cartCount -= product.quantity;
+    // if (index > -1) {
+    //     let product = state.cart[index];
+    //     state.cartCount -= product.quantity;
 
-        state.cart.splice(index, 1);
-    }
+    //     state.cart.splice(index, 1);
+    // }
   },
   setVisitorEntry(state, d) {
     state.visitorEntry = d

@@ -57,24 +57,20 @@
 
     <div class="ps-items">
 
-      <a href="ps-step-4.html" class="ps-item -payment">
+      <a href="" class="ps-item -payment" @click.prevent="pay(0)">
         <img src="https://www.boxnet.se/Content/Images/hero/hero-Swish_logo.png">
-        <figure><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg></figure>
+        <figure><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg></figure> Dummy
       </a>
 
-       <a href="ps-step-4.html" class="ps-item -payment">
-        <img src="https://comparecamp.com/media/uploads/2020/03/Bambora-Logo-1.png">
-        <figure><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path></svg></figure>
-      </a>
 
     </div>
 
 
   <h1>Checkout</h1>
 
-  <h4>issue with response... ?</h4>
+  <h4>issue with response... ? yo</h4>
 
-<!--   {{checkout}} -->
+ {{merchant}}
 
 
 
@@ -87,7 +83,27 @@
 export default {
   data() {
     return {
-      id: this.$route.params.id
+      id: this.$route.params.id,
+      merchant: this.$store.getters.getMerchant,
+      style: [
+        { cssText:
+          `:root {
+            --ps-skin: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.skin};
+            --ps-skin-bg: linear-gradient(#fff, #fff 34vh, #e9e9e9 90vh);
+            --ps-link: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.link};
+            --ps-btn-txt: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.btnText};
+          }
+
+          .-mode-dark,
+          .-mode-light  {
+            --ps-skin: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.skin};
+            --ps-skin-bg: var(--ps-skin);
+            --ps-link: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.link};
+            --ps-btn-txt: ${this.$store.getters.getMerchant.customStyling.styling.skin.vars.colors.btnText};
+          }` ,
+          type: 'text/css'}
+      ]
+
     }
   },
   asyncData ({ req, params, store }) {
@@ -103,57 +119,37 @@ export default {
 
   },
 
-  // async asyncData({ $axios }) {
-  //   const test = await $axios.$get('http://icanhazip.com')
-  //   return { test }
-  // },
 
 
 
   head () {
     return {
-      style: [
-        // { cssText: `body { color: red!important; display: ${this.mm.name}; }`, type: 'text/css' }
-      ],
-      title: "Purspot | Checkout",
-      // style: [
-      //   { cssText:
-      //     `:root {
-      //       --ps-skin: ${this.merchant.skin.vars.colors.skin};
-      //       --ps-skin-bg: var(--ps-skin);
-      //       --ps-link: ${this.merchant.skin.vars.colors.link};
-      //       --ps-btn-txt: ${this.merchant.skin.vars.colors.btnText};
-      //     }
 
-      //     .-mode-dark,
-      //     .-mode-light  {
-      //       --ps-skin: ${this.merchant.skin.vars.colors.skin};
-      //       --ps-skin-bg: var(--ps-skin);
-      //       --ps-link: ${this.merchant.skin.vars.colors.link};
-      //       --ps-btn-txt: ${this.merchant.skin.vars.colors.btnText};
-      //     }` ,
-      //     type: 'text/css'}
-      // ]
+      title: "Purspot | Checkout",
+
 
     }
   },
 
   methods: {
-    setMode(m) {
-      this.$store.dispatch("setAppMode", m);
-    },
-    setEntry(m) {
-      this.$store.dispatch("setVisitorEntry", m);
-    },
+    pay(id) {
+      console.log('Pay -> ' + id);
+      let postData = {};
+      let url = 'https://purspotapi-dev.azurewebsites.net/api/shop/pay/' + this.$route.params.id;
+      this.$axios.post(url, postData).then(response => {
+        console.log(response.data);
+        this.$router.push('/receipt/' + response.data.orderId);
+      });
+    }
+
   },
   mounted() {
-   // this.setMode(this.merchant.skin.mode)
 
-    if(!this.$store.getVisitorEntry) {
-      this.setEntry('merchnant')  
-    }
+     // Update active step
+    this.$store.dispatch("setVisitorActiveStep", 3);
+
     
-  }
+  },
 
 
 

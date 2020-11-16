@@ -267,9 +267,13 @@
 
 
 <!--   <h1>Response</h1>
-  {{location.merchant}} -->
+  {{location}} -->
+
+ <h1>Cart</h1>
+  {{this.$store.getters.getCart}}
 
   <Cart />
+
 
 </div>
 </template>
@@ -324,20 +328,7 @@ export default {
     }
   },
   methods: {
-    postBasket(){
-      let postData =
-      {
-        basketLines: this.basketLines
-      };
-      
-      let url = apiUrl + '/api/shop/createorder/' + this.$route.params.id;
-
-      axios.post(url, postData).then(response => {
-        console.log(response.data);
-        alertify.success('Basket saved to db: ' + response.data);
-        this.$router.push('/checkout/' + response.data.orderId);
-      });
-    },
+    
     accordionGroupToggle (event) {
       let el = event.target;
       el.closest('.ps-accordion-group').classList.toggle('-open-group');

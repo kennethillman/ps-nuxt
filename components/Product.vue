@@ -25,6 +25,8 @@
 
               </div>
           </div>
+
+       <!--    {{basketLines}} -->
     </div>
 
 </template>
@@ -38,13 +40,14 @@
     ],
     data(){
       return {
-        itemCount: 0
+        itemCount: 0,
+        basketLines: []
       }
     },
     methods: {
       addToBasket(productId, productPrice) {
 
-        let totalItems = this.$store.getters.getCartCount + 1;
+        let p, totalItems = this.$store.getters.getCartCount + 1;
         let totalPrice = this.$store.getters.getCartTotal + productPrice;
 
         this.itemCount ++;
@@ -53,20 +56,18 @@
 
         //this.$toast.success('Added ' + productId)
 
-       
 
-        // if(undefined === this.basketLines[productId]) {
-        //   let p =
-        //   {
-        //     'productId': productId,
-        //     'quantity': 1
-        //   };
-
-
+        if(undefined === this.basketLines[productId]) {
+          p = {
+            'productId': productId,
+            'quantity': 1
+          }
+          this.basketLines.push(p);
+        }
 
 
         //  this.$store.dispatch('addToCart', p);
-        //  this.basketLines.push(p);
+        
 
 
         //
