@@ -117,16 +117,16 @@
 		.num {
 			background: $black;
 			color: $white;
-			font-size: 15px;
+			font-size: 17px;
 			border-radius: 20px;
-			height: 26px;
-			width: 26px;
+			height: 32px;
+			width: 32px;
 			text-align: center;
-			line-height: 26px;
+			line-height: 31px;
 			font-weight: bold;
 			position: absolute;
-			right: -8px;
-			top: 7px;
+			left: -8px;
+			top: 4px;
 			box-shadow: 0 2px 6px rgba(0,0,0,.12);
 			z-index: 2;
 
@@ -181,15 +181,17 @@
 		.ps-btn {
 			width: auto;
 			max-width: none;
-			display: block;
+			
 			padding-left: 14px;
 			padding-right: 42px;
 			margin: 0;
+			display: flex;
+			justify-content: space-evenly;
+
 			.-discrete {
-				
-					opacity: .62;
-				
+				opacity: .62;
 			}
+			
 			svg {
 				right: 20px;
 
