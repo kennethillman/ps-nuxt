@@ -2,6 +2,9 @@
 // GLOBAL
 // 
 
+html {
+	-webkit-tap-highlight-color: transparent;
+}
 
 body {
 	background: var(--ps-skin-bg);
