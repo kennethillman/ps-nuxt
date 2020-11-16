@@ -3,7 +3,86 @@
 
 
 
+      <!-- info -->
+      <!-- Show if entrypage is HOME -->
+      <div class="ps-info -even" >
+        <div class="ps-info-item -merchant js-merchant -close " v-if="this.$store.getters.getVisitorEntry != 'location'">
+          <div class="adress">
+      
+            <div class="header -sub">{{merchant.name}}</div>
+              <div class="text">
+                <div>Kanalvägen 7, Upplands Väsby</div>
+                <span> Telefon: 08-590 342 60</span>
+              </div>
+              <div class="text -extra">
+                <br>
+                
+              Bredden thai AB, 
+              <br>559009-9007<br>
+              Leevrnas tider kan variera mellan 20-40 min <br><br> 
+              Org Birkavägen 4, <br>152 41 Södertälje<br>
+              
+              </div>
+              <a href="#" class="ps-btn -xsmall -ghost -inbl -mode js-merchant-click">Mer info</a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg>
+          </div>
 
+              <template v-if="merchant.customStyling.bgImageUrl">
+                <figure 
+                  class="logo"
+                  :style="{ background: merchant.customStyling.styling.skin.vars.colors.skin}"
+                  @click="setMerch(merch)"
+                >
+                  <img :src="require(`~/assets/logos/${merchant.customStyling.bgImageUrl}`)" />
+                </figure>
+              </template> 
+              <template v-else>
+                <figure 
+                class="logo -text"
+                :class="{'-dark' : merchant.customStyling.styling.skin.mode === 'dark'}" 
+                :style="{ background: merchant.customStyling.styling.skin.vars.colors.skin}"
+                @click="setMerch(merch)"
+                >
+                  <i class="logo-text">
+                    {{merchant.name.slice(0, 3)}}
+                  </i>
+                </figure>
+              </template> 
+          
+        </div>
+        <div class="ps-info-item -place" v-if="this.$store.getters.getVisitorEntry != 'location'">
+            <div class="place">
+                <div class="header">{{location.name}}</div>
+                <div class="text">
+                  xxx
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-1 5v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l.471 4h-13.385l.471-4h2.221z"></path></svg>
+            </div>
+        </div>
+        <div class="ps-info-item -time">
+          <div class="ps-body">
+            <div class="open">
+              <div class="header">
+                ÖPPETTIDER idag 
+              </div>
+              <div class="time">
+                xx:xx - xx:xx
+              </div>
+            </div>
+            <div class="order">
+              <div class="header">
+                Ordertider idag 
+              </div>
+              <div class="time">
+                xx:xx - xx:xx
+              </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447 1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"></path></svg>    
+          </div> 
+
+        </div>
+      </div>
 
 
 
@@ -85,86 +164,7 @@
 
       </div>
 
-      <!-- info -->
-      <!-- Show if entrypage is HOME -->
-      <div class="ps-info -even" >
-        <div class="ps-info-item -merchant js-merchant -close " v-if="this.$store.getters.getVisitorEntry != 'location'">
-          <div class="adress">
-      
-            <div class="header -sub">{{merchant.name}}</div>
-              <div class="text">
-                <div>Kanalvägen 7, Upplands Väsby</div>
-                <span> Telefon: 08-590 342 60</span>
-              </div>
-              <div class="text -extra">
-                <br>
-                
-              Bredden thai AB, 
-              <br>559009-9007<br>
-              Leevrnas tider kan variera mellan 20-40 min <br><br> 
-              Org Birkavägen 4, <br>152 41 Södertälje<br>
-              
-              </div>
-              <a href="#" class="ps-btn -xsmall -ghost -inbl -mode js-merchant-click">Mer info</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"></path></svg>
-          </div>
 
-              <template v-if="merchant.customStyling.bgImageUrl">
-                <figure 
-                  class="logo"
-                  :style="{ background: merchant.customStyling.styling.skin.vars.colors.skin}"
-                  @click="setMerch(merch)"
-                >
-                  <img :src="require(`~/assets/logos/${merchant.customStyling.bgImageUrl}`)" />
-                </figure>
-              </template> 
-              <template v-else>
-                <figure 
-                class="logo -text"
-                :class="{'-dark' : merchant.customStyling.styling.skin.mode === 'dark'}" 
-                :style="{ background: merchant.customStyling.styling.skin.vars.colors.skin}"
-                @click="setMerch(merch)"
-                >
-                  <i class="logo-text">
-                    {{merchant.name.slice(0, 3)}}
-                  </i>
-                </figure>
-              </template> 
-          
-        </div>
-        <div class="ps-info-item -place">
-            <div class="place">
-                <div class="header">{{location.name}}</div>
-                <div class="text">
-                  xxx
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-1 5v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l.471 4h-13.385l.471-4h2.221z"></path></svg>
-            </div>
-        </div>
-        <div class="ps-info-item -time">
-          <div class="ps-body">
-            <div class="open">
-              <div class="header">
-                ÖPPETTIDER idag 
-              </div>
-              <div class="time">
-                xx:xx - xx:xx
-              </div>
-            </div>
-            <div class="order">
-              <div class="header">
-                Ordertider idag 
-              </div>
-              <div class="time">
-                xx:xx - xx:xx
-              </div>
-            </div>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447 1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"></path></svg>    
-          </div> 
-
-        </div>
-      </div>
 
 
     
