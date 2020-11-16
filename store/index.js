@@ -20,7 +20,8 @@ export const state = () => ({
   appTermsAccepted: false,  // -> Bool (like special terms for buying tickets)
   appLockBodyScroll: false, // -> Bool 
   appNotify: false,         // -> Bool 
-  appToken: null,           // -> Bool 
+  appToken: null,           // -> Bool
+  appHideHeader: false,      // -> Bool  
 
   groupList: false,         // Api -> ?  
 
@@ -115,6 +116,9 @@ export const mutations = {
   },
   setAppToken(state, d) {
     state.appToken = d
+  },
+  setAppHideHeader(state, d) {
+    state.appHideHeader = d
   },
 
   setGroupList(state, d) {
@@ -220,6 +224,9 @@ export const actions = {
   setAppToken(vuexContext, state) {
     vuexContext.commit('setAppToken', state)
   },
+  setAppHideHeader(vuexContext, state) {
+    vuexContext.commit('setAppHideHeader', state)
+  },
 
   setGroupList(vuexContext, state) {
     vuexContext.commit('setGroupList', state)
@@ -304,6 +311,9 @@ export const getters = {
   },
   getAppToken(state) {
     return state.appToken
+  },
+  getAppHideHeader(state) {
+    return state.appHideHeader
   },
 
   getGroupList(state) {

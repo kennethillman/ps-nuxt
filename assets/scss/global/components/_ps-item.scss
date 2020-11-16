@@ -13,9 +13,9 @@
 	&.-small {
 		display: flex;
 		flex-wrap: wrap;
-		direction: row;
+		flex-direction: row;
 		padding-bottom: 24px;
-		// justify-content: space-evenly;
+		justify-content: space-evenly;
 	}
 
 	&.-small-items {

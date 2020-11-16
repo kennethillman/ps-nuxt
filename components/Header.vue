@@ -1,7 +1,7 @@
 <template>
 
     <!-- header -->
-    <div class="ps-header ">
+    <div class="ps-header " :class="{'-hide' : this.$store.getters.getAppHideHeader}">
       <div class="ps-body">
 
         <figure class="ps-logo">

@@ -64,7 +64,7 @@
     <div class="ps-search -full -start" >
       <svg-icon name="search" />
       <input type="text" name="" placeholder="Sök handlare..." v-model="search"
-      @blur="searchBlur()" 
+      @blur="searchBlur($event)" 
       @focus="searchFocus($event)"
       @keyup="searchKeyup($event)">
     </div>
@@ -299,7 +299,7 @@ export default {
         this.searchActive = false
       }
 
-      console.log(this.searchActive + ' ' + el.value)
+      
     },
     searchFocus(event) {
 
@@ -309,16 +309,24 @@ export default {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       x = rect.left + scrollLeft
-      y = rect.top + scrollTop - 100
+      y = rect.top + scrollTop - 8
 
-  
       window.scrollTo(0, y);
+      this.$store.dispatch("setAppHideHeader", true)
 
-      console.log('focus' + x + ' ' + y)
     },
-    searchBlur(){
+    searchBlur(event){
+       let x,y,el = event.target
+      let rect = el.getBoundingClientRect()
+      let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      x = rect.left + scrollLeft
+      y = rect.top + scrollTop - 90
+
+      window.scrollTo(0, y);
       this.searchActive = false
-      console.log(this.searchActive)
+      this.$store.dispatch("setAppHideHeader", false)
     },
     setMerch(m) {
       this.$store.dispatch("setMerchant", m);
