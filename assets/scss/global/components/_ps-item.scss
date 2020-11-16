@@ -18,6 +18,10 @@
 		// justify-content: space-evenly;
 	}
 
+	&.-small-items {
+		min-height: 100vh;
+	}
+
 
 	&.-start {
 		padding: 16px 24px;
@@ -237,7 +241,7 @@
 			padding-top: 4px;
 
 			span {
-				display: block;
+				display: inline-block;
 			}
 		}
 
@@ -252,7 +256,8 @@
 			} 
 		}
 
-		&.-small {
+		&.-small,
+		.-small-items &  {
 			width: 100px;
 			flex-direction: column;
 			margin-right: 8px;
