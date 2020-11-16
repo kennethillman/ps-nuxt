@@ -1,7 +1,9 @@
 <template>
   <div>
 
-    <div class="purspot">
+    <div class="purspot" 
+    :class="{'-open-menu' : this.$store.getters.getAppMenuOpen}"
+    >
         <Header /> 
         <Nuxt />
      <!--    <Cookie /> -->
@@ -18,7 +20,7 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: `-mode-${this.$store.getters.getAppMode}`
+        class: `-mode-${this.$store.getters.getAppMode} `
       }
     }
   }
