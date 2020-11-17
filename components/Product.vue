@@ -45,13 +45,31 @@
       }
     },
     methods: {
+      cartPulse(){
+
+        // Add to store or add to "addToBasket"
+
+        let timerPulse = setTimeout(() => {
+          this.$store.dispatch("setCartPulse", false)
+        }, 775);
+
+        if (this.$store.getters.getCartPulse){
+          this.$store.dispatch("setCartPulse", false)
+        }
+
+        this.$store.dispatch("setCartPulse", true)
+
+      },
       addToBasket(productId, productPrice) {
+
+        this.cartPulse();
 
         let p, totalItems = this.$store.getters.getCartCount + 1;
         let totalPrice = this.$store.getters.getCartTotal + productPrice;
 
         this.itemCount ++;
         this.$store.dispatch('setCartCount', totalItems);
+
         this.$store.dispatch('setCartTotal', totalPrice);
 
         //this.$toast.success('Added ' + productId)
@@ -73,6 +91,9 @@
         //
       },
       removeFromBasket(productId, productPrice) {
+
+        this.cartPulse();
+        
 
        // this.$toast.error('Removed ' + productId)
         let totalItems, totalPrice = this.$store.getters.getCartTotal - productPrice;

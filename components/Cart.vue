@@ -14,11 +14,11 @@
 
        <svg-icon name="cart" />
       </a>
-      <div class="num" :class="{'-animate-pulse': pulse}">
+      <div class="num" :class="{'-animate-pulse': this.$store.getters.getCartPulse}">
         {{this.$store.getters.getCartCount}}
         <i></i>
-        <i></i>
-        <i></i>
+        <!-- <i></i> -->
+        <!-- <i></i> -->
       </div> 
     </div>
     
@@ -55,7 +55,7 @@
           //alertify.success('Basket saved to db: ' + response.data);
           this.$router.push('/checkout/' + response.data.orderId);
         });
-      },
+    },
 
 
     }

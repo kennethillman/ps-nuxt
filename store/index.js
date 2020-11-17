@@ -37,6 +37,8 @@ export const state = () => ({
   cartCode: false, 
   cartDisabled: true,
   cartTotal: 0,
+  cartPulse: false,
+  cartOpen: false,
 
 
 })
@@ -151,6 +153,12 @@ export const mutations = {
   },
   setCartCount(state, d) {
     state.cartCount = d
+  },
+  setCartPulse(state, d) {
+    state.cartPulse = d
+  },
+  setCartOpen(state, d) {
+    state.cartOpen = d
   }
 
 
@@ -258,6 +266,12 @@ export const actions = {
   },
   setCartCount(vuexContext, state) {
     vuexContext.commit('setCartCount', state)
+  },
+  setCartPulse(vuexContext, state) {
+    vuexContext.commit('setCartPulse', state)
+  },
+  setCartOpen(vuexContext, state) {
+    vuexContext.commit('setCartOpen', state)
   }
 
 }
@@ -348,6 +362,12 @@ export const getters = {
   },
   getCartCount(state) {
     return state.cartCount
+  },
+  getCartPulse(state) {
+    return state.cartPulse
+  },
+  getCartOpen(state) {
+    return state.cartOpen
   }
 
 
