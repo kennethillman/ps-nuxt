@@ -10,8 +10,8 @@
         <!-- NUXT -->
         <Nuxt />
        
-       <!-- COKKIE -->
-       <!--    <Cookie /> -->
+        <!-- COKKIE -->
+        <Cookie />
 
     </div>
 

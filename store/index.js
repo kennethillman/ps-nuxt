@@ -9,21 +9,21 @@ export const state = () => ({
   
   visitorEntry: false,      // home, group, merchant, location
   visitorActiveStep: 1,      
-  vistorCookie: false,      // -> Bool -> Get from with local storage
-  visitorOrder: false, 
-  visitorOrderToken: false,
+  vistorCookie: false,      // -> Move to local storage 
+  visitorOrder: false,      // NOT USED
+  visitorOrderToken: false, // NOT USED
 
-  appDefaults: false,       // Api ( Purspust PS )
+  appDefaults: false,       // Api ( Purspots app defualts from temp json file today)
   appMode: 'default',       // default, dark, light
   appMenuOpen: false,       // -> Bool
   appShowModal: false,      // -> Bool
   appTermsAccepted: false,  // -> Bool (like special terms for buying tickets)
-  appLockBodyScroll: false, // -> Bool 
-  appNotify: false,         // -> Bool 
+  appLockBodyScroll: false, // Not implemented yet 
+  appNotify: false,         // NOT USED (Make custom notify component) 
   appToken: null,           // -> Bool
-  appHideHeader: false,      // -> Bool  
+  appHideHeader: false,     // -> Bool  
 
-  groupList: false,         // Api -> ?  
+  groupList: false,         // Api   
 
   merchantList: false,      // Api
   merchant: false,          // Api
@@ -39,7 +39,6 @@ export const state = () => ({
   cartTotal: 0,
   cartPulse: false,
   cartOpen: false,
-
 
 })
 
