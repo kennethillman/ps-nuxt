@@ -113,7 +113,7 @@
 	.cart-buttons-wrapper {
 		
 		transform: translateY(0);
-		transition: all .475s ease;
+		transition: all .4375s ease;
 		.-open-cart & {
 			transform: translateY(-58%)
 		}
@@ -260,7 +260,7 @@
 	padding: 0;
 	padding: 80px 16px 76px;
 	transform: translateY(100%);
-	transition: all .475s ease-out;
+	transition: all .375s ease-out;
 	.-open-cart & {
 		transform: translateY(0)
 	}
@@ -285,7 +285,7 @@
 		
 	.ps-forms {
 		margin-top: -8px;
-		padding: 16px;
+		padding: 16px 16px 80px;
 	}
 	
 	.cart-items-tip {

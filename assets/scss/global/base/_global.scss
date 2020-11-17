@@ -13,6 +13,7 @@ body {
 	&.-open-menu {
 		height: 100vh;
 		overflow: hidden;
+
 	}
 }
 
@@ -23,6 +24,28 @@ body {
 	max-width: 860px;
 	margin: 0 auto;
 	overflow-x: hidden;
+
+	.ps-info,
+	.ps-hero,
+	.ps-search,
+	.ps-accordion,
+	h1 {
+		transition: all .375s ease-out;
+		opacity: 1;
+	}
+
+	&.-open-cart {
+		overflow: hidden;
+    	height: 100vh;
+
+    	.ps-info,
+    	.ps-hero,
+    	.ps-search,
+    	.ps-accordion,
+    	h1 {
+			opacity: 0;
+		}
+	}
 
 	&.-reset {
 		min-height: 0; 
