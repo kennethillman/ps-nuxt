@@ -254,6 +254,8 @@
 	position: fixed;
 	height: 100vh;
 	top: 0;
+	left: 0;
+	width: 100%;
 	overflow: hidden;
 	z-index: 99;
 	display: block;
@@ -267,11 +269,13 @@
 
 	.cart-header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 4px 16px 8px;
 		
 		.ps-btn {
 			margin: 0;
+
+
 		}
 		.-mode-dark &{
 			color: $white;
@@ -282,10 +286,20 @@
 		overflow: scroll;
 		    height: calc(100vh - 196px);
 	}
+
+	.ps-btn {
+			margin: 0;
+
+			&.-to-pay {
+				margin: 32px auto 24px;
+				display: block;
+			}
+
+		}
 		
 	.ps-forms {
 		margin-top: -8px;
-		padding: 16px 16px 80px;
+		padding: 16px 16px 102px;
 	}
 	
 	.cart-items-tip {

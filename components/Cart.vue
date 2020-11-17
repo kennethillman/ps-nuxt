@@ -3,10 +3,10 @@
   
   <div class="ps-cart-items ps-box">
      <div class="cart-header">
-      <h2>DIN VARUKORG</h2> <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
-            Stäng <!-- - 253 SEK --> 
+      <h2>DIN VARUKORG</h2> <!-- <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
+            Stäng 
             <svg-icon name="cross" />
-          </a>
+          </a> -->
     </div>
   <div class="cart-scroll ps-the-box ">
    
@@ -16,13 +16,13 @@
 
       <!-- COUPON -->
 
-<!--       <div class="cart-item-coupon">
+<!--  -->     <div class="cart-item-coupon">
         <label class="ps-label">Kupong</label>
         <div class="ps-coupon">
           <a class="ps-btn -code">ANVÄND</a>
           <input type="text" placeholder="Kupongkod..." name="">
         </div>      
-      </div> -->
+      </div> 
 
 
       <!-- NOTE-->
@@ -100,7 +100,7 @@
       <!-- DELIVERY ADRESS -->
 
 
-    <!--       
+    <!--         -->
       <div class="cart-items-delivery">
 
         <p>Lite text om vad hemleverans innebär (går att ändra i admin)
@@ -128,7 +128,7 @@
 
       <div class="divider"></div>
 
-      -->
+    
 
 
       <!-- MERCHENDISE -->
@@ -162,7 +162,7 @@
 
                 <div class="row -b -p -total">
                     <div class="left">TOTALT <span>(inkl. moms)</span></div>
-                    <div class="right">252.00 SEK</div>
+                    <div class="right">253.00 SEK</div>
                 </div>
 
             </div>   
@@ -170,7 +170,11 @@
         </div>
 
 
-          <a href="ps-step-2.html" class="ps-btn -mt-16 -small">Tillbaka</a> 
+          
+          <a href="" class="ps-btn -icon -to-pay" @click.prevent="postBasket()" > 
+            Till Betalning - 253 SEK
+            <svg-icon name="arrow" />
+          </a>
 
           <div class="divider"></div>
 
@@ -204,9 +208,9 @@
              <svg-icon name="cart" />
           </a>
 
-          <a href="" class="ps-btn small -icon" @click.prevent="postBasket()">
-            Till Betalning <!-- - 253 SEK --> 
-            <svg-icon name="arrow" />
+          <a href="" class="ps-btn small -icon" @click.prevent="showHideCart()"> 
+            Stäng varukorgen<!-- - 253 SEK --> 
+            <svg-icon name="cross" />
           </a>
 
         </div>
@@ -259,11 +263,14 @@
     },
     methods: {
       showHideCart(){
-        if (this.$store.getters.getCartOpen){
-          this.$store.dispatch("setCartOpen", false);  
-        } else {
-          this.$store.dispatch("setCartOpen", true); 
+        if(!this.$store.getters.getCartDisabled){
+          if (this.$store.getters.getCartOpen){
+            this.$store.dispatch("setCartOpen", false);  
+          } else {
+            this.$store.dispatch("setCartOpen", true); 
+          }
         }
+
         
       },
       postBasket(){
