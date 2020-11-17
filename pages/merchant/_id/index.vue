@@ -7,7 +7,7 @@
 
       <!-- hero -->
       <!-- Show if entrypage is MERCHANT -->
-      <div class="ps-hero -brand -no-img-overlay" 
+    <div class="ps-hero -brand -no-img-overlay" 
       :style="{ 'background-image': 'url(' + merchant.customStyling.bgImageUrl + ')' }"
       v-if="this.$store.getters.getVisitorEntry === 'merchant'">
         <div class="hero-body">
@@ -84,7 +84,7 @@
 
         </div>
 
-      </div>
+    </div>
 
 
     
