@@ -16,14 +16,14 @@
 
       <!-- COUPON -->
 
-<!--  -->     <div class="cart-item-coupon">
+<!--     <div class="cart-item-coupon">
         <label class="ps-label">Kupong</label>
         <div class="ps-coupon">
           <a class="ps-btn -code">ANVÄND</a>
           <input type="text" placeholder="Kupongkod..." name="">
         </div>      
       </div> 
-
+ --> 
 
       <!-- NOTE-->
 
@@ -39,6 +39,7 @@
 
             
 
+      <!-- 
       <div class="cart-items-tip">
        <b>LÄGG TILL DRICKS</b>
        <div class="tips">
@@ -49,10 +50,8 @@
           
       </div> 
 
-            <div class="divider"></div>
-
-      
-      
+            <div class="divider"></div> 
+          -->
 
 
 
@@ -100,7 +99,7 @@
       <!-- DELIVERY ADRESS -->
 
 
-    <!--         -->
+    <!--         
       <div class="cart-items-delivery">
 
         <p>Lite text om vad hemleverans innebär (går att ändra i admin)
@@ -126,8 +125,8 @@
 
       </div> 
 
-      <div class="divider"></div>
-
+      <div class="divider"></div>x
+-->
     
 
 
@@ -137,32 +136,49 @@
 
             <h2 class="header-2">VAROR</h2>
 
-            <div class="products">
+            <div class="products -interactive">
                 <div class="row -p">
-                    <div class="left">1 Margeherita- Lunch</div>
-                    <div class="right">25.00 SEK</div>
+                    <div class="quantity ">
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                      <div class="sum">1</div>
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
+                  </div>
+                    <div class="name"> Margeherita- Lunch</div>
+                    <div class="price">25 SEK</div>
                 </div>
                 <div class="row">
-                    <div class="left">1 La bussola med extra ost och extra allt inkl dryck och kaffe med påtår - Lunch</div>
-                    <div class="right">21199.00 SEK</div>
+                  <div class="quantity ">
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                      <div class="sum">3</div>
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
+                  </div>
+                    <div class="name">La bussola med extra ost och extra allt inkl dryck och kaffe</div>
+                    <div class="price">199 SEK</div>
                 </div>
-                <div class="row">
-                    <div class="left">1 Vesuvio barn pizza - Lunch</div>
-                    <div class="right">99.00 SEK</div>
-                </div>
-
+           
                 <div class="row -p">
+                    <div class="quantity ">
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                      <div class="sum">1</div>
+                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
+                  </div>
+                    <div class="name"> Vuesuvio</div>
+                    <div class="price">109 SEK</div>
+                </div>
+              </div>
+          <div class="products ">
+                <div class="row -p -int">
                     <div class="left">Moms 12%</div>
-                    <div class="right">12.00 SEK</div>
+                    <div class="right">12 SEK</div>
                 </div>
-                <div class="row">
+                <div class="row -int">
                     <div class="left">Moms 18%</div>
-                    <div class="right">16.00 SEK</div>
+                    <div class="right">16 SEK</div>
                 </div>
 
-                <div class="row -b -p -total">
+                <div class="row -b -p -int -total">
                     <div class="left">TOTALT <span>(inkl. moms)</span></div>
-                    <div class="right">253.00 SEK</div>
+                    <div class="right">253 SEK</div>
                 </div>
 
             </div>   

@@ -324,6 +324,100 @@
 		}
 	}
 
+	////
+
+	.products {
+		&.-interactive {
+			.row {
+				margin: 0 -16px 6px;
+				padding-bottom: 6px;
+				align-items: center;
+				border-bottom: 1px solid $gray-200;
+				&:last-child {
+					border: 0;
+				}
+			}
+			.name {
+				flex-grow: 1;
+				padding: 0 4px 0 10px;
+			}
+			.price {
+				width: 80px;
+				text-align: right;
+				white-space: nowrap;
+			}
+			.quantity {
+				width: 64px;
+				// position: absolute;
+				right: -8px;
+				top: -2px;
+				display: flex;
+				align-items: center;
+
+				.ps-btn {
+					margin: 0;
+				}
+
+				.sum {
+					//position: relative;
+					//top: 0px;
+					font-size: 15px;
+					display: inline-block;
+					padding: 0 8px;
+					font-weight: bold;
+					line-height: 1;
+					color: $black;
+				}
+
+			}
+			.-total {
+				border-bottom: none;
+			}
+
+		}
+
+
+		.-int {
+			margin-left: -16px;
+			margin-right: -16px;
+			.left {
+				padding-left: 74px
+			}
+		}
+
+		@include VP480 {
+
+			&.-interactive {
+				.row {
+					margin: 0 0px 6px;
+				}
+				.name {
+					padding: 0 6px 0 12px;
+				}
+				.price {
+					width: 90px;
+					text-align: right;
+					white-space: nowrap;
+				}
+				.quantity {
+					width: 74px;
+			
+
+				}
+
+
+			}
+			.-int {
+				margin-left: 0px;
+				margin-right: 0px;
+				.left {
+					padding-left: 86px
+				}
+			}
+		}
+
+	}
+
 }
 
 
