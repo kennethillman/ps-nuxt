@@ -1,12 +1,18 @@
 <template>
   <div>
 
-    <div class="purspot" 
-    :class="{'-open-menu' : this.$store.getters.getAppMenuOpen}"
-    >
+    <!-- PURSPOT WRAPPER - For styling -->
+    <div class="purspot" :class="{'-open-menu' : this.$store.getters.getAppMenuOpen}">
+
+        <!-- HEADER -->
         <Header /> 
+       
+        <!-- NUXT -->
         <Nuxt />
-     <!--    <Cookie /> -->
+       
+       <!-- COKKIE -->
+       <!--    <Cookie /> -->
+
     </div>
 
   </div>
