@@ -214,17 +214,21 @@
           </a>
 
         </div>
+
+
      
 
 
 
-        <div class="num" :class="{'-animate-pulse': this.$store.getters.getCartPulse}">
+        
+      </div>
+
+              <div class="num" :class="{'-animate-pulse': this.$store.getters.getCartPulse}">
           {{this.$store.getters.getCartCount}}
           <i></i>
           <!-- <i></i> -->
           <!-- <i></i> -->
         </div> 
-      </div>
       
       <div class="cart-button -pay">
          
