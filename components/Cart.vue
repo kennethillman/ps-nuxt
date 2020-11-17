@@ -2,7 +2,7 @@
 <div>
   
   <div class="ps-cart-items ps-box">
-     <div class="cart-header">
+     <div class="cart-header -hide">
       <h2>DIN VARUKORG</h2> <!-- <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
             Stäng 
             <svg-icon name="cross" />
@@ -153,7 +153,7 @@
                       <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
                   </div>
                     <div class="name">La bussola med extra ost och extra allt inkl dryck och kaffe</div>
-                    <div class="price">199 SEK</div>
+                    <div class="price">2199 SEK</div>
                 </div>
            
                 <div class="row -p">
@@ -187,9 +187,9 @@
 
 
           
-          <a href="" class="ps-btn -icon -to-pay" @click.prevent="postBasket()" > 
+          <a href="" class="ps-btn -to-pay" @click.prevent="postBasket()" > 
             Till Betalning - 253 SEK
-            <svg-icon name="arrow" />
+            
           </a>
 
           <div class="divider"></div>
