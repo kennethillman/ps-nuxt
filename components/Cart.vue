@@ -2,14 +2,14 @@
 <div>
   
   <div class="ps-cart-items ps-box">
-
-  <div class="cart-scroll ps-the-box ">
-    <div class="cart-header">
+     <div class="cart-header">
       <h2>DIN VARUKORG</h2> <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
             Stäng <!-- - 253 SEK --> 
             <svg-icon name="cross" />
           </a>
     </div>
+  <div class="cart-scroll ps-the-box ">
+   
     
     
 <div class="ps-forms ps-the-box-text-black ">

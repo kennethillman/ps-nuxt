@@ -269,15 +269,18 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 4px 16px 8px;
-		background: $white;
+		
 		.ps-btn {
 			margin: 0;
+		}
+		.-mode-dark &{
+			color: $white;
 		}
 	}
 
 	.cart-scroll {
 		overflow: scroll;
-		    height: calc(100vh - 155px);
+		    height: calc(100vh - 196px);
 	}
 		
 	.ps-forms {
