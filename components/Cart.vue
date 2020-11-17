@@ -3,7 +3,16 @@
   
   <div class="ps-cart-items ps-box">
 
-    <div class="ps-forms ps-the-box ps-the-box-text-black ">
+  <div class="cart-scroll ps-the-box ">
+    <div class="cart-header">
+      <h2>DIN VARUKORG</h2> <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
+            Stäng <!-- - 253 SEK --> 
+            <svg-icon name="arrow" />
+          </a>
+    </div>
+    
+    
+<div class="ps-forms ps-the-box-text-black ">
 
       <!-- COUPON -->
 
@@ -41,7 +50,7 @@
       </div> 
 
             <div class="divider"></div>
-            
+
       
       
 
@@ -171,8 +180,7 @@
 
     </div>
 
-
-
+  </div>
   </div>
 
 
@@ -181,16 +189,31 @@
     <div class="cart ">
    
       <div class="cart-button">
-        <a href="" class="ps-btn small -icon" @click.prevent="postBasket()"
-        :disabled="this.$store.getters.getCartDisabled"
-        :class="{'-disabled' : this.$store.getters.getCartDisabled}">
-          
-        <span class="price"></span>{{this.$store.getters.getCartTotal}} SEK  <span class="text" :class="{'-discrete': this.$store.getters.getCartTotal !== 0 }">
-          DIN VARUKROG 
-        </span> 
 
-         <svg-icon name="cart" />
-        </a>
+
+        <div class="cart-buttons-wrapper">
+
+          <a href="" class="ps-btn small -icon" @click.prevent="showHideCart()"
+           :disabled="this.$store.getters.getCartDisabled"
+           :class="{'-disabled' : this.$store.getters.getCartDisabled}">
+              
+              <span class="price"></span>{{this.$store.getters.getCartTotal}} SEK  <span class="text" :class="{'-discrete': this.$store.getters.getCartTotal !== 0 }">
+                DIN VARUKROG 
+              </span> 
+
+             <svg-icon name="cart" />
+          </a>
+
+          <a href="" class="ps-btn small -icon" @click.prevent="postBasket()">
+            Till Betalning <!-- - 253 SEK --> 
+            <svg-icon name="arrow" />
+          </a>
+
+        </div>
+     
+
+
+
         <div class="num" :class="{'-animate-pulse': this.$store.getters.getCartPulse}">
           {{this.$store.getters.getCartCount}}
           <i></i>
@@ -200,10 +223,7 @@
       </div>
       
       <div class="cart-button -pay">
-          <a href="" class="ps-btn small -icon" @click.prevent="postBasket()">
-          Till Betalning - 253 SEK 
-          <svg-icon name="arrow" />
-        </a>
+         
       </div>
       
 
@@ -238,6 +258,14 @@
       }
     },
     methods: {
+      showHideCart(){
+        if (this.$store.getters.getCartOpen){
+          this.$store.dispatch("setCartOpen", false);  
+        } else {
+          this.$store.dispatch("setCartOpen", true); 
+        }
+        
+      },
       postBasket(){
         let postData =
         {

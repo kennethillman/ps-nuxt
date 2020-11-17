@@ -59,8 +59,9 @@
 		margin: 0 auto 0px;
 		padding: 9px 16px 0;
 		max-width: 540px;
-		height: 58px;
+		height: 54px;
 		position: relative;
+		overflow: hidden;
 
 
 		background-color: transparent;
@@ -105,6 +106,20 @@
 			}
 		}
 	}
+
+
+
+
+	.cart-buttons-wrapper {
+		
+		transform: translateY(0);
+		transition: all .675s ease-out;
+		.-open-cart & {
+			transform: translateY(-58%)
+		}
+	}
+
+
 
 
 	// CART THE BUTTON
@@ -188,6 +203,10 @@
 			display: flex;
 			justify-content: space-evenly;
 
+			~ .ps-btn {
+				margin-top: 16px;
+			}
+
 			.-discrete {
 				opacity: .62;
 			}
@@ -235,10 +254,34 @@
 	position: fixed;
 	height: 100vh;
 	top: 0;
-	overflow: scroll;
+	overflow: hidden;
 	z-index: 99;
+	display: block;
+	padding: 0;
+	padding: 80px 16px 76px;
+	transform: translateY(100%);
+	transition: all .675s ease-out;
+	.-open-cart & {
+		transform: translateY(0)
+	}
+
+	.cart-header {
+		display: flex;
+		justify-content: space-between;
+		padding: 4px 16px 8px;
+		background: $white;
+		.ps-btn {
+			margin: 0;
+		}
+	}
+
+	.cart-scroll {
+		overflow: scroll;
+		height: 100%;
+	}
 		
 	.ps-forms {
+		margin-top: -8px;
 		padding: 16px;
 	}
 	

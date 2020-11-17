@@ -2,7 +2,7 @@
   <div>
 
     <!-- PURSPOT WRAPPER - For styling -->
-    <div class="purspot" :class="{'-open-menu' : this.$store.getters.getAppMenuOpen,'-open-cart' : !this.$store.getters.getCartOpen}">
+    <div class="purspot" :class="{'-open-menu' : this.$store.getters.getAppMenuOpen,'-open-cart' : this.$store.getters.getCartOpen}">
 
         <!-- HEADER -->
         <Header /> 
