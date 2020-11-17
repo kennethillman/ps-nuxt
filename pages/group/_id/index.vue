@@ -173,6 +173,8 @@ export default {
     if(!this.$store.getVisitorEntry) {
       this.setEntry('merchnant')  
     }
+
+    this.$store.dispatch("setCartOpen", false);  
     
   }
 

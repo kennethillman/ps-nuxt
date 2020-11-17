@@ -334,10 +334,9 @@ export default {
   },
   mounted() {
 
-        console.log(this.merchants)
-
     // Update active step
     this.$store.dispatch("setVisitorActiveStep", 1);
+    this.$store.dispatch("setCartOpen", false);  
 
     // Startpage should always have Purpsot defaults
     this.$store.dispatch("setAppMode", 'default');

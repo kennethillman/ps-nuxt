@@ -250,6 +250,8 @@ export default {
       this.setEntry('merchant')  
     }
 
+    this.$store.dispatch("setCartOpen", false);  
+
    
     
   }

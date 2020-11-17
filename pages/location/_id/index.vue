@@ -338,6 +338,8 @@ export default {
       this.$store.dispatch("setVisitorEntry", 'location');
     }
 
+    this.$store.dispatch("setCartOpen", false);  
+
   }
 
 
