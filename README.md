@@ -69,13 +69,16 @@ This is bigger things. All functionality and flows need to be tested
 * LocalStorage (Not touched) - Maybe -> https://www.npmjs.com/package/nuxt-vuex-localstorage 
 
 ### COOKIE
+Yes/ No should be moved to local storage, now in vuex.
 
-If yes no should be moved to local storage
-
+### POP UP
+"Do you want a notofication..." ...etc
+HTML done, not implemented in nuxt
 
 ### CONTENT
 
-Strategy for your content pages
+Strategy for your content pages is not done.  
+I am avalible for discussion
 
 * Konsumer (Not touched)
 * Merchant (Not touched)
@@ -91,6 +94,9 @@ Strategy for your content pages
 
 * "Tab" - Map (Design excist for the toggle tab but not the map itself) only ask for locastion tab is clicked. only load map thing if clicked, save kb.
 * "Tab" - QR (Design excist for the toggle tab but n0t the QR code itself) only load QR things if clicked. save kb.
+* A-Ö - Load more function, showing all now.
+* "Groups" like A-Ö list different groups. 
+
 
 ### GROUPS
 
@@ -123,7 +129,7 @@ Strategy for your content pages
 
 ### RECEIPT
 
-* ...
+* popup
 * Check static data 
 
 
