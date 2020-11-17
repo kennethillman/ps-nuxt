@@ -156,7 +156,7 @@
                     <div class="price">2199 SEK</div>
                 </div>
            
-                <div class="row -p">
+                <div class="row ">
                     <div class="quantity ">
                       <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
                       <div class="sum">1</div>
@@ -167,7 +167,7 @@
                 </div>
               </div>
           <div class="products ">
-                <div class="row -p -int">
+                <div class="row -int">
                     <div class="left">Moms 12%</div>
                     <div class="right">12 SEK</div>
                 </div>
