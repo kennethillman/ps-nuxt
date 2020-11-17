@@ -113,7 +113,7 @@
 	.cart-buttons-wrapper {
 		
 		transform: translateY(0);
-		transition: all .675s ease-out;
+		transition: all .475s ease;
 		.-open-cart & {
 			transform: translateY(-58%)
 		}
@@ -260,7 +260,7 @@
 	padding: 0;
 	padding: 80px 16px 76px;
 	transform: translateY(100%);
-	transition: all .675s ease-out;
+	transition: all .475s ease-out;
 	.-open-cart & {
 		transform: translateY(0)
 	}
@@ -277,7 +277,7 @@
 
 	.cart-scroll {
 		overflow: scroll;
-		height: 100%;
+		    height: calc(100vh - 155px);
 	}
 		
 	.ps-forms {

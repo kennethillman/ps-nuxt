@@ -7,7 +7,7 @@
     <div class="cart-header">
       <h2>DIN VARUKORG</h2> <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
             Stäng <!-- - 253 SEK --> 
-            <svg-icon name="arrow" />
+            <svg-icon name="cross" />
           </a>
     </div>
     
