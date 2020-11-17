@@ -231,6 +231,12 @@
 // CART ITEMS
 
 .ps-cart-items {
+
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	overflow: scroll;
+	z-index: 99;
 		
 	.ps-forms {
 		padding: 16px;
