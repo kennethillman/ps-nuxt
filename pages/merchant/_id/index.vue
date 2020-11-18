@@ -146,12 +146,31 @@
     <div class="ps-items">
 
       <nuxt-link  v-for="(loc, index) of merchant.merchantLocations" :to="/location/ + loc.id"  class="ps-item -place" :key="index + loc.name">
-
-        <div class="header">{{loc.name}}</div>
-        <div class="text">{{loc.description}}</div>
+        <div>
+           <div class="header">{{loc.name}}</div>
+           <div class="text" v-if="loc.description">{{loc.description}}</div>
+        </div>
+       
         <figure><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></figure>
 
       </nuxt-link>
+
+      <a class="ps-item -place -disabled">
+        <div>
+          <div class="header">Demo stängd  </div>
+        <div class="text">Hämt vid disken bredvid kassa 3. </div>
+        </div>
+        
+        <div class="closed">Stängt</div>
+      </a>
+
+        <a class="ps-item -place -disabled">
+        <div>
+          <div class="header">Demo stängd  </div>
+        </div>
+        
+        <div class="closed">Stängt</div>
+      </a>
 
     </div> 
 

@@ -125,10 +125,8 @@
     <a class="ps-btn -ghost">Till startsidan</a>
 
 
-
-  <h1>Receipt</h1>
-
-  {{receipt}}
+<!--   <h1>Receipt</h1>
+  {{receipt}} -->
 
 
 </div>
@@ -140,51 +138,74 @@
 export default {
   data() {
     return {
-      id: this.$route.params.id,
-      merchantOrg: false,
-      products: false
+     
     }
   },
   asyncData ({ req, params, store }) {
 
-      // We can return a Promise instead of calling the callback
       return fetch('https://purspotapi-dev.azurewebsites.net/api/shop/receipt/' + params.id)
         .then(res => res.json())
         .then((data) => {
   
-          return { receipt: data }
+          return { receipt: data,  merchant: data.merchant}
         })
 
   },
 
-  // async asyncData({ $axios }) {
-  //   const test = await $axios.$get('http://icanhazip.com')
-  //   return { test }
-  // },
-
-
-
   head () {
     return {
-      title: "Purspot | Receipt",
+
+
+      title: "Purspot | Checkout",
+      style: [
+        { cssText:
+          `:root {
+            --ps-skin: ${this.merchant.customStyling.styling.skin.vars.colors.skin};
+            --ps-skin-bg: linear-gradient(#fff, #fff 34vh, #e9e9e9 90vh);
+            --ps-link: ${this.merchant.customStyling.styling.skin.vars.colors.link};
+            --ps-btn-txt: ${this.merchant.customStyling.styling.skin.vars.colors.btnText};
+          }
+
+          .-mode-dark,
+          .-mode-light  {
+            --ps-skin: ${this.merchant.customStyling.styling.skin.vars.colors.skin};
+            --ps-skin-bg: var(--ps-skin);
+            --ps-link: ${this.merchant.customStyling.styling.skin.vars.colors.link};
+            --ps-btn-txt: ${this.merchant.customStyling.styling.skin.vars.colors.btnText};
+          }` ,
+          type: 'text/css'}
+      ]
+
     }
   },
-
   methods: {
 
+    
   },
   mounted() {
 
+    // Update active step
+    this.$store.dispatch("setVisitorActiveStep", 4);
     
+    // Make Cart Enabled
+    this.$store.dispatch("setCartDisabled", false); 
+
+    // Set mode
+    this.$store.dispatch("setAppMode", this.merchant.customStyling.styling.skin.mode);  
+
+    // Set merchnat in VUEX if not defind before
+    if(!this.$store.getters.getMerchant) {
+      this.$store.dispatch("setMerchant", this.merchant);
+    }
+
   }
-
-
-
-
 
 
 }
 </script>
+
+
+
 
 
 

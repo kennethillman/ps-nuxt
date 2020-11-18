@@ -62,17 +62,19 @@ svgSprite: {
 
 ## Whats left
 
-This is bigger things. All functionality and flows need to be tested
+Bigger things from my perspective.  
+All functionality and flows need to be tested
 
 ## FUNCTIONALITY
 * Language (Not touched) - Maybe -> https://i18n.nuxtjs.org/
 * LocalStorage (Not touched) - Maybe -> https://www.npmjs.com/package/nuxt-vuex-localstorage 
+* Time - Open houres etc. (Not touched) - Design for lables etc done.
 
 ### COOKIE
 Yes/ No should be moved to local storage, now in vuex.
 
 ### POP UP
-"Do you want a notofication..." ...etc
+"Do you want a notification..." ...etc
 HTML done, not implemented in nuxt
 
 ### CONTENT
@@ -88,12 +90,12 @@ I am avalible for discussion
 ### OTHER PAGES
 
 * Payment History (Not touched)
-* Feedback (Not touched)
+* Feedback (Not touched) - Design done
 
 ### STARTPAGE
 
-* "Tab" - Map (Design excist for the toggle tab but not the map itself) only ask for locastion tab is clicked. only load map thing if clicked, save kb.
-* "Tab" - QR (Design excist for the toggle tab but n0t the QR code itself) only load QR things if clicked. save kb.
+* "Tab" - Map (Design done for the toggle tab but not the map itself) only ask for locastion tab is clicked. only load map thing if clicked, save kb.
+* "Tab" - QR (Design done for the toggle tab but n0t the QR code itself) only load QR things if clicked. save kb.
 * A-Ö - Load more function, showing all now.
 * "Groups" like A-Ö list different groups. 
 
@@ -111,7 +113,7 @@ I am avalible for discussion
 
 ### LOCATION
 
-* Products serach (Not touched) -> startpage has a search working.
+* Products search (Not touched) -> Startpage has a search working.
 * Suggestion -> In only one "location" maybe redirect to loctaion directly
 * Check static data 
 
@@ -124,13 +126,17 @@ I am avalible for discussion
 
 ### CHECKOUT
 
-* (Stuck here, api call)
+* Hardcoded payment method
+* Method  Pay() is pending
 * Check static data 
 
 ### RECEIPT
 
-* popup 
-* Check static data 
+As pay is pending this is the URL i use.
+http://localhost:3000/receipt/9ee03b15-547a-4087-93c1-3041e40c3135#
+
+* popup -> HTML done, not implemented in nuxt
+* Check Static data 
 
 
 
