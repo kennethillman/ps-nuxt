@@ -110,7 +110,7 @@
 export default {
   data() {
     return {
-      merchant: this.$store.getters.getMerchant
+     
     }
   },
   asyncData ({ req, params, store }) {
@@ -151,12 +151,15 @@ export default {
   },
   methods: {
     pay(id) {
+
+      // /api/shop/pay/a9da70b5-a3c0-4bcd-aa58-6aab2fdf3262?PaymentMethod=Dummy&CallbackUrl=https://ps-nuxt.vercel.app/receipt/a9da70b5-a3c0-4bcd-aa58-6aab2fdf3262
+
       console.log('Pay -> ' + id);
       let postData = {};
-      let url = 'https://purspotapi-dev.azurewebsites.net/api/shop/pay/' + this.$route.params.id;
+      let url = 'https://purspotapi-dev.azurewebsites.net/api/shop/pay/' + this.$route.params.id + '?PaymentMethod=Dummy&CallbackUrl=http://localhost:3000/receipt/ ' + this.$route.params.id ;
       this.$axios.get(url, postData).then(response => {
         console.log(response.data);
-        this.$router.push('/receipt/' + response.data.orderId);
+       // this.$router.push('/receipt/' + response.data.orderId);
       });
     } 
     
@@ -180,18 +183,9 @@ export default {
   }
 
 
-
-
-
-
 }
 </script>
 
-
-<!--     
-
-
-  -->
 
 
 
