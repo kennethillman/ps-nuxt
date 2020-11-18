@@ -104,6 +104,7 @@
 
 
 export default {
+  transition: 'custom',
   data() {
     return {
       id: this.$route.params.id,

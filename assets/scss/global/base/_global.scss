@@ -136,6 +136,23 @@ body {
 	}
 
 
+// NUXT.JS - PAGE TRANSITIONS
+
+.page-enter-active,
+.page-leave-active,
+.custom-enter-active, 
+.custom-leave-active {
+  transition: opacity .375s
+}
+
+.page-enter,
+.page-leave-active,
+.custom-enter, 
+.custom-leave-active {
+  opacity: 0
+}
+
+
 
 
 

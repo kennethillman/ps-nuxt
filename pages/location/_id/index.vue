@@ -120,6 +120,7 @@
 
 
 export default {
+  transition: 'custom',
   data() {
     return {
       message: this.$route.params.id,

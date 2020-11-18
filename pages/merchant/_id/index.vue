@@ -60,6 +60,7 @@
 
 
 export default {
+  transition: 'custom',
   data() {
     return {
 

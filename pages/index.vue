@@ -239,6 +239,7 @@
 
 <script>
 export default {
+  transition: 'custom',
   head() {
     return {
       title: 'Purspot startpage',
@@ -346,20 +347,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
 
-  .ps-page-container {
-
-    .logo {
-      width: 120px;
-      margin: 40px auto;
-      svg {
-        width:100%;
-        height: auto;
-      }
-    }
-
-  }
-
-</style>
 
