@@ -1,7 +1,7 @@
 <template>
 
        <div class="ps-hero -brand " 
-            :class="{'-no-img-overlay' : merchant.customStyling.bgImageOverlay}" 
+            :class="{'-no-img-overlay' : !merchant.customStyling.bgImageOverlay}" 
             :style="{ 'background-image': 'url(' + merchant.customStyling.bgImageUrl + ')' }"
         >
         <div class="hero-body">
