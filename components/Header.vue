@@ -19,16 +19,23 @@
         </figure>
 
         <div class="ps-header-steps">
-          <div class="box-steps ">
+          <div class="ps-transition">
+            <div class="box-steps ">
 
-            <div v-for="(step, index) of steps" class="step" :key="index+'step'"
-            :class="{'-active': $store.getters.getVisitorActiveStep === index+1,'-done': $store.getters.getVisitorActiveStep >= index+2}"
-            >
+            
+                <div v-for="(step, index) of steps" class="step" :key="index+'step'"
+                :class="{'-active': $store.getters.getVisitorActiveStep === index+1,'-done': $store.getters.getVisitorActiveStep >= index+2}"
+                >
 
-              <figure><span>{{step}} </span></figure>
-              <div></div>
+                  <figure><span>{{step}} </span></figure>
+                  <div></div>
 
-            </div>
+                </div>  
+         
+            </div> 
+            <div class="ps-text-header">
+              <h1 class="header">Din varukorg</h1>
+            </div>     
 
           </div>
         </div>

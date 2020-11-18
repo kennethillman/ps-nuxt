@@ -422,6 +422,37 @@
 	}
 
 	&.-recipte {
+		
+		.ps-hide {
+			overflow: hidden;
+		}
+
+		.ps-transition {
+			height: 152px;
+			transform: translateY(0);
+			transition: all .475s ease;
+		}
+
+		.ps-body {
+			
+		
+			
+		}
+
+		&.-sent  {
+			.ps-transition{
+				transform: translateY(-115%)
+			}		
+		}
+
+		.ps-sent,
+		.ps-send, {
+			height: 152px;
+			position: relative;
+		}
+		.ps-sent {
+			    margin: 25px  0 0 ;
+		}
 		.ps-btn {
 			margin: 0px 0 0;
 		}

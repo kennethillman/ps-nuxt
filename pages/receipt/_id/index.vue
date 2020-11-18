@@ -2,43 +2,12 @@
 <div>
 
   <div class="ps-info -even">
-      <div class="ps-info-item -thanks">
-        <div class="ps-body">
-          <div class="header">Tack för din beställning!</div>
-          <a href="">Ditt kvitto kan ses nedan.</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.855 10.303c.086.554.145 1.118.145 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.348 0 4.518.741 6.304 1.993l-1.421 1.457c-1.408-.913-3.083-1.45-4.883-1.45-4.963 0-9 4.038-9 9s4.037 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.865-1.902zm-.951-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z"></path></svg>
-        </div>
-    </div>  
-            <div class="ps-info-item -recipte">
-        <div class="ps-body">
-          <div class="header">Skicka kvitto</div>
-          <div>
-            Ange e-pst och mobilnummer för att få kvitto eller vid 
-    eventuella frågor från handlaren om ditt köp.
-          </div>
-           <div class="ps-forms">
-            <input type="text" placeholder="E-post..." name="">
-            <input type="text" placeholder="Mobilnummer..." name="">
-            
-          </div>
-          <div class="ps-forms -second">
 
-          <label class="radio-wrapper" for="RememeberMe">
-                  <span>Kom ihåg mig</span>
-                  
-                  <label class="ps-rc">
-                    <input type="checkbox" name="test">
-                    <span class="checkmark"></span>
-                  </label>
-
-              </label> 
-              <button class="ps-btn -small -inbl">Skicka</button>
-
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"></path></svg>
-      </div>
-    </div>  
-    </div>
+    <InfoThanks />
+    <InfoReceipt />
+    <InfoPlace :location="location" /> 
+ 
+  </div>
 
 
     <figure class="ps-notification">
@@ -141,13 +110,13 @@ export default {
      
     }
   },
-  asyncData ({ req, params, store }) {
+  async asyncData ({ req, params, store }) {
 
       return fetch('https://purspotapi-dev.azurewebsites.net/api/shop/receipt/' + params.id)
         .then(res => res.json())
         .then((data) => {
   
-          return { receipt: data,  merchant: data.merchant}
+          return { receipt: data,  merchant: data.merchant, location: data.merchantLocation}
         })
 
   },
@@ -156,7 +125,7 @@ export default {
     return {
 
 
-      title: "Purspot | Checkout",
+      title: "Purspot | Receipt",
       style: [
         { cssText:
           `:root {
@@ -193,7 +162,7 @@ export default {
     // Set mode
     this.$store.dispatch("setAppMode", this.merchant.customStyling.styling.skin.mode);  
 
-    // Set merchnat in VUEX if not defind before
+    // Set merchant in VUEX if not defind before
     if(!this.$store.getters.getMerchant) {
       this.$store.dispatch("setMerchant", this.merchant);
     }
