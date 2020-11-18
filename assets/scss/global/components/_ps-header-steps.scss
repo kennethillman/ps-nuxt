@@ -13,8 +13,9 @@
   .ps-text-header {
     text-align: center;
     height: 50px;
+
     .header {
-      opacity: 1!important;
+      padding: 24px 0px;
     }
     
   }
@@ -26,7 +27,7 @@
 
     .-open-cart & {
       .ps-transition{
-        transform: translateY(-60%)
+        transform: translateY(-57%)
       }   
     }
 

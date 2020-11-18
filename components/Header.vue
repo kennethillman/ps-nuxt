@@ -34,7 +34,7 @@
          
             </div> 
             <div class="ps-text-header">
-              <h1 class="header">Din varukorg</h1>
+              <h2 class="header">Din varukorg</h2>
             </div>     
 
           </div>
