@@ -283,9 +283,6 @@ export default {
   computed: {
     filterdMerchants() {
       return this.merchants.filter(mearch => {
-
-
-         //return mearch.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1 || mearch.group.toLowerCase().indexOf(this.search.toLowerCase()) > -1
          return mearch.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
       })
     },
@@ -327,6 +324,7 @@ export default {
 
       window.scrollTo(0, y);
       this.searchActive = false
+      this.search = ''
       this.$store.dispatch("setAppHideHeader", false)
     },
     setMerch(m) {
