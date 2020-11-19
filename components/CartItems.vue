@@ -8,7 +8,7 @@
      
       
       
-    <div class="ps-forms ps-the-box-text-black ">
+    <div class="ps-forms ps-the-box-text-black " id="cartContent">
 
         <!-- COUPON -->
 
@@ -214,9 +214,18 @@
       setCartScrollAreaHeight(){
         // Needed fix pixel for crossbrowser / device.
 
-        let windowInnerHeight  = window.innerHeight;
+        let windowInnerHeight  = window.innerHeight - 154;
+        let cartContent = document.getElementById('cartContent').clientHeight;
 
-        this.scrollAreaHeight = windowInnerHeight - 154
+        console.log(cartContent)
+
+        if ( windowInnerHeight < cartContent){
+          this.scrollAreaHeight = windowInnerHeight
+        } else {
+          this.scrollAreaHeight = cartContent
+        }
+
+        
 
 
 
