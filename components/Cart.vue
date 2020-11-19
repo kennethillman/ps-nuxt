@@ -65,25 +65,7 @@
 
         
       },
-      postBasket(){
-        this.$store.dispatch("setCartOpen", false);  
-        let postData =
-        {
-          basketLines: [ { "productId": "5f3e0961-d7b6-49ae-8b23-383e88b9f4d3", "quantity": 1 }, { "productId": "5f3e0961-d7b6-49ae-8b23-383e88b9f4d3", "quantity": 1 }, { "productId": "5f3e0961-d7b6-49ae-8b23-383e88b9f4d3", "quantity": 1 } ]
-        };
 
-        console.log(postData)
-        
-        let url = 'https://purspotapi-dev.azurewebsites.net/api/shop/createorder/' + this.$route.params.id;
-
-        console.log(url)
-
-        this.$axios.post(url, postData).then(response => {
-          console.log(response.data);
-          //alertify.success('Basket saved to db: ' + response.data);
-          this.$router.push('/checkout/' + response.data.orderId);
-        });
-    },
 
 
     }
