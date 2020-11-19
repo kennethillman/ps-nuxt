@@ -223,8 +223,6 @@
         let windowInnerHeight  = window.innerHeight - 154;
         let cartContent = document.getElementById('cartContent').clientHeight;
 
-        console.log(cartContent)
-
         if ( windowInnerHeight < cartContent){
           this.scrollAreaHeight = windowInnerHeight
         } else {

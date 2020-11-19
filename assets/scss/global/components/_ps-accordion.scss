@@ -15,16 +15,22 @@
 	text-decoration: none;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 	background-color: $white;
-	margin: 0 0 3px;
+	margin: 0 4px 3px;
 	border-radius: 6px;
 	overflow: hidden;
 	line-height: 1;
+
 
 	.ps-accordion-products {
 		display: none;
 	}
 
 	.ps-accordion-header {
+
+		&.-sub {
+			background-color: #f1f4f1;
+			margin: 0 0px 4px;
+		}
 
 		
 		padding: 16px 64px 16px 24px;
@@ -110,12 +116,42 @@
 	&.-sub {
 		display: none;
 		box-shadow: none;
-		margin: 0;
+		margin-top: -1px;
 		border-top: none;	
 	}
 
 
 	&.-open-group {
+
+		&.-sub {
+			background-color: #f1f4f1;
+			margin-bottom: 6px;
+
+			.ps-product {
+			    border-color: #ddd;
+			}
+			
+			.ps-accordion-header{
+				
+			}
+			&:before {
+				content: '';
+				height: 3px;
+				width: 100%;
+				border-radius: 3px;
+				background-color: var(--ps-link);
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				z-index: 2;
+				display: none;
+			}
+
+			.ps-accordion-products {
+
+			}
+
+		}
 
 		.-sub {
 			display: block; 
