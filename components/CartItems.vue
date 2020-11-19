@@ -2,7 +2,10 @@
 
   <div class="ps-cart-items ps-box">
 
-    <a class="ps-btn -round -cart-close" @click="showHideCart()"><svg-icon name="cross" /></a>
+    <div class="cart-close-button">
+      <a class="ps-btn -round -cart-close" @click="showHideCart()"><svg-icon name="cross" /></a>
+    </div>
+    
 
     <div class="cart-scroll ps-the-box " 
          v-body-scroll-lock="this.$store.getters.getCartOpen" 
