@@ -2,7 +2,7 @@
 <div>
 
   <div class="ps-info -even">
-    <InfoMerchant :merchant="merchant" v-if="this.$store.getters.getVisitorEntry != 'location'" />
+    <InfoMerchant :merchant="merchant" />
     <InfoPlace :location="location" /> 
     <InfoCart />
   </div>
