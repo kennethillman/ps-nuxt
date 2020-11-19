@@ -2,13 +2,8 @@
 <div>
   
   <div class="ps-cart-items ps-box">
-     <div class="cart-header -hide">
-      <h2>DIN VARUKORG</h2> <!-- <a href="" class="ps-btn -small -icon" @click.prevent="showHideCart()">
-            Stäng 
-            <svg-icon name="cross" />
-          </a> -->
-    </div>
-  <div class="cart-scroll ps-the-box ">
+
+  <div class="cart-scroll ps-the-box " v-body-scroll-lock="this.$store.getters.getCartOpen" >
    
     
     
@@ -16,14 +11,15 @@
 
       <!-- COUPON -->
 
-<!--     <div class="cart-item-coupon">
+      <!--     
+      <div class="cart-item-coupon">
         <label class="ps-label">Kupong</label>
         <div class="ps-coupon">
           <a class="ps-btn -code">ANVÄND</a>
           <input type="text" placeholder="Kupongkod..." name="">
         </div>      
       </div> 
- --> 
+      --> 
 
       <!-- NOTE-->
 
@@ -99,7 +95,7 @@
       <!-- DELIVERY ADRESS -->
 
 
-    <!--         
+      <!--         
       <div class="cart-items-delivery">
 
         <p>Lite text om vad hemleverans innebär (går att ändra i admin)
@@ -126,7 +122,7 @@
       </div> 
 
       <div class="divider"></div>x
--->
+      -->
     
 
 
@@ -134,38 +130,38 @@
 
       <div class="cart-items-merchendise ps-the-box-text">
 
-            <h2 class="header-2">VAROR</h2>
+        <h2 class="header-2">VAROR</h2>
 
-            <div class="products -interactive">
-                <div class="row -p">
-                    <div class="quantity ">
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
-                      <div class="sum">1</div>
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
-                  </div>
-                    <div class="name"> Margeherita- Lunch</div>
-                    <div class="price">25 SEK</div>
-                </div>
-                <div class="row">
-                  <div class="quantity ">
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
-                      <div class="sum">3</div>
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
-                  </div>
-                    <div class="name">La bussola med extra ost och extra allt inkl dryck och kaffe</div>
-                    <div class="price">2199 SEK</div>
-                </div>
-           
-                <div class="row ">
-                    <div class="quantity ">
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
-                      <div class="sum">1</div>
-                      <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
-                  </div>
-                    <div class="name"> Vuesuvio</div>
-                    <div class="price">109 SEK</div>
-                </div>
+        <div class="products -interactive">
+            <div class="row -p">
+                <div class="quantity ">
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                  <div class="sum">1</div>
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
               </div>
+                <div class="name"> Margeherita- Lunch</div>
+                <div class="price">25 SEK</div>
+            </div>
+            <div class="row">
+              <div class="quantity ">
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                  <div class="sum">3</div>
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
+              </div>
+                <div class="name">La bussola med extra ost och extra allt inkl dryck och kaffe</div>
+                <div class="price">2199 SEK</div>
+            </div>
+       
+            <div class="row ">
+                <div class="quantity ">
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="minus" /></button>
+                  <div class="sum">1</div>
+                  <button class="ps-btn -round -xsmall" ><svg-icon name="plus" /></button>
+              </div>
+                <div class="name"> Vuesuvio</div>
+                <div class="price">109 SEK</div>
+            </div>
+          </div>
           <div class="products ">
                 <div class="row -int">
                     <div class="left">Moms 12%</div>
@@ -181,8 +177,7 @@
                     <div class="right">253 SEK</div>
                 </div>
 
-            </div>   
-
+          </div>   
         </div>
 
 

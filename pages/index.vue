@@ -323,7 +323,7 @@ export default {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       x = rect.left + scrollLeft
-      y = rect.top + scrollTop - 90
+      y = rect.top + scrollTop 
 
       window.scrollTo(0, y);
       this.searchActive = false

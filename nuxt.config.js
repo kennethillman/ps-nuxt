@@ -27,7 +27,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    // '@/plugins/vue-match-heights',
+     {src: '@/plugins/vue-body-scroll-lock', mode: 'client'}
     // '@/plugins/vue-mq',
   ],
 
