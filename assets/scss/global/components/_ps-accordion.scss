@@ -15,7 +15,7 @@
 	text-decoration: none;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 	background-color: $white;
-	margin: 0 4px 3px;
+	margin: 0 0 3px;
 	border-radius: 6px;
 	overflow: hidden;
 	line-height: 1;
@@ -116,7 +116,7 @@
 	&.-sub {
 		display: none;
 		box-shadow: none;
-		margin-top: -1px;
+		margin: -1px 5px 3px;
 		border-top: none;	
 	}
 

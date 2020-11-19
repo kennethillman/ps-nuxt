@@ -22,8 +22,9 @@
 	.ps-btn {
 		&.-cart-close {
 			position: absolute;
-			top: 8px;
-    		right: 0px;
+			top: 76px;
+		    right: 12px;
+		    z-index: 10;
 		}
 	}
 

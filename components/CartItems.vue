@@ -2,6 +2,8 @@
 
   <div class="ps-cart-items ps-box">
 
+    <a class="ps-btn -round -cart-close" @click="showHideCart()"><svg-icon name="cross" /></a>
+
     <div class="cart-scroll ps-the-box " 
          v-body-scroll-lock="this.$store.getters.getCartOpen" 
          :style="{'height': scrollAreaHeight + 'px' }">
@@ -11,7 +13,7 @@
     <div class="ps-forms ps-the-box-text-black " id="cartContent">
 
 
-          <a class="ps-btn -round -cart-close" @click="showHideCart()"><svg-icon name="cross" /></a>
+          
 
         <!-- COUPON -->
 
