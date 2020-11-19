@@ -2,7 +2,9 @@
 
   <div class="ps-cart-items ps-box">
 
-    <div class="cart-scroll ps-the-box " v-body-scroll-lock="this.$store.getters.getCartOpen" >
+    <div class="cart-scroll ps-the-box " 
+         v-body-scroll-lock="this.$store.getters.getCartOpen" 
+         :style="{'height': scrollAreaHeight + 'px' }">
      
       
       
@@ -203,8 +205,22 @@
 <script>
 
   export default {
-
+    data() {
+      return {
+        scrollAreaHeight: 280,
+      }
+    },
     methods: {
+      setCartScrollAreaHeight(){
+        // Needed fix pixel for crossbrowser / device.
+
+        let windowInnerHeight  = window.innerHeight;
+
+        this.scrollAreaHeight = windowInnerHeight - 154
+
+
+
+      },
 
       postBasket(){
         this.$store.dispatch("setCartOpen", false);  
@@ -224,9 +240,12 @@
           //alertify.success('Basket saved to db: ' + response.data);
           this.$router.push('/checkout/' + response.data.orderId);
         });
+      },
+
+
     },
-
-
+    mounted(){
+      this.setCartScrollAreaHeight()
     }
 
   }

@@ -62,12 +62,10 @@
             this.$store.dispatch("setCartOpen", true); 
           }
         }
-
-        
-      },
-
-
-
+      }
+    },
+    mounted(){
+    
     }
 
   }
