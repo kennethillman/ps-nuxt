@@ -55,7 +55,7 @@
         <!-- CHOICES -->
 
         <div class="cart-items-choices">
-          <label class="radio-wrapper" for="eatingSpot">
+          <label class="radio-wrapper" for="eatingSpot" @click="eatingSpot()">
                   <span>Äta här</span>
                   
                   <label class="ps-rc">
@@ -64,7 +64,7 @@
                   </label>
 
               </label>
-            <label class="radio-wrapper" for="eatingSpot">
+            <label class="radio-wrapper" for="eatingSpot" @click="eatingSpot()">
                   <span>Ta med</span>
                   
                   <label class="ps-rc">
@@ -73,11 +73,11 @@
                   </label>
 
               </label>
-              <label class="radio-wrapper" for="eatingSpot">
+              <label class="radio-wrapper" for="eatingSpot" @click="eatingSpot()">
                   <span>Hemleverans</span>
                   
                   <label class="ps-rc">
-                    <input type="radio" name="test" checked="">
+                    <input type="radio" name="test" >
                     <span class="checkmark"></span>
                   </label>
 
@@ -182,10 +182,12 @@
           </div>
 
 
-            
-            <a href="" class="ps-btn -to-pay" @click.prevent="postBasket()" > 
+            <div class="ps-mandatory" :class="{'-done' : this.payActive}"><svg-icon name="info" /> Fyll i <b>Ät här</b> , <b>Ta med</b> eller <b>Hemleverans</b>.</div>
+            <a href="" class="ps-btn -to-pay " 
+               :class="{'-disabled' : !this.payActive}"
+               @click.prevent="postBasket()" > 
+
               Till Betalning - 253 SEK
-              
             </a>
 
             <div class="divider"></div>
@@ -208,6 +210,7 @@
     data() {
       return {
         scrollAreaHeight: 280,
+        payActive: false,
       }
     },
     methods: {
@@ -228,6 +231,11 @@
         
 
 
+
+      },
+      eatingSpot(){
+
+        this.payActive = true;
 
       },
 
