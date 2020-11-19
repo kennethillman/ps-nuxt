@@ -18,9 +18,7 @@ export const state = () => ({
   appMenuOpen: false,       // -> Bool
   appShowModal: false,      // -> Bool
   appTermsAccepted: false,  // -> Bool (like special terms for buying tickets)
-  appLockBodyScroll: false, // Not implemented yet 
   appNotify: false,         // NOT USED (Make custom notify component) 
-  appToken: null,           // -> Bool
   appHideHeader: false,     // -> Bool  
 
   groupList: false,         // Api   
@@ -107,14 +105,8 @@ export const mutations = {
   setAppTermsAccepted(state, d) {
     state.appTermsAccepted = d
   },
-  setAppLockBodyScroll(state, d) {
-    state.appLockBodyScroll = d
-  },
   setAppNotify(state, d) {
     state.appNotify = d
-  },
-  setAppToken(state, d) {
-    state.appToken = d
   },
   setAppHideHeader(state, d) {
     state.appHideHeader = d
@@ -220,14 +212,8 @@ export const actions = {
   setAppTermsAccepted(vuexContext, state) {
     vuexContext.commit('setaAppTermsAccepted', state)
   },
-  setAppLockBodyScroll(vuexContext, state) {
-    vuexContext.commit('setAppLockBodyScroll', state)
-  },
   setAppNotify(vuexContext, state) {
     vuexContext.commit('setAppNotify', state)
-  },
-  setAppToken(vuexContext, state) {
-    vuexContext.commit('setAppToken', state)
   },
   setAppHideHeader(vuexContext, state) {
     vuexContext.commit('setAppHideHeader', state)
@@ -314,14 +300,8 @@ export const getters = {
   getAppTermsAccepted(state) {
     return state.appTermsAccepted
   },
-  getAppLockBodyScroll(state) {
-    return state.appLockBodyScroll
-  },
   getAppNotify(state) {
     return state.appNotify
-  },
-  getAppToken(state) {
-    return state.appToken
   },
   getAppHideHeader(state) {
     return state.appHideHeader
