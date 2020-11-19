@@ -11,7 +11,7 @@
         <Nuxt />
        
         <!-- COKKIE -->
-        <Cookie />
+      <!--   <Cookie /> -->
 
     </div>
 
