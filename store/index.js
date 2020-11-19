@@ -10,8 +10,6 @@ export const state = () => ({
   visitorEntry: false,      // home, group, merchant, location
   visitorActiveStep: 1,      
   vistorCookie: false,      // -> Move to local storage 
-  visitorOrder: false,      // NOT USED
-  visitorOrderToken: false, // NOT USED
 
   appDefaults: false,       // Api ( Purspots app defualts from temp json file today)
   appMode: 'default',       // default, dark, light
@@ -82,12 +80,6 @@ export const mutations = {
   },
   setVisitorCookie(state, d) {
     state.visitorCookie = d
-  },
-  setVisitorOrder(state, d) {
-    state.visitorOrder = d
-  },
-  setVisitorOrderToken(state, d) {
-    state.visitorOrderToken = d
   },
 
   setAppDefaults(state, d) {
@@ -168,7 +160,6 @@ export const actions = {
 
     const apiMerchants = await fetch('https://purspotapi-dev.azurewebsites.net/api/shop/merchants')
     .then(response => response.json())
-    commit('setAppToken', apiMerchants)
 
     commit('setMerchantList', apiMerchants)
     commit('setAppDefaults', psTempData)
@@ -188,13 +179,6 @@ export const actions = {
   },
   setVisitorCookie(vuexContext, state) {
     vuexContext.commit('setVisitorCookie', state)
-  },
-
-  setVisitorOrder(vuexContext, state) {
-    vuexContext.commit('setVisitorOrder', state)
-  },
-  setVisitorOrderToken(vuexContext, state) {
-    vuexContext.commit('setVisitorOrderToken', state)
   },
 
   setAppDefaults(vuexContext, state) {
@@ -277,12 +261,6 @@ export const getters = {
   },
   getVisitorCookie(state) {
     return state.visitorCookie
-  },
-  getVisitorOrder(state) {
-    return state.visitorOrder
-  },
-  getVisitorOrderToken(state) {
-    return state.visitorOrderToken
   },
 
   getAppDefaults(state) {
