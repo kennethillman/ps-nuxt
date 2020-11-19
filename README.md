@@ -20,7 +20,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Styling
 
-custom setup with style-resource ...
+custom setup with scss and style-resource ...
 
 ### Mode
 
@@ -123,6 +123,7 @@ I am avalible for discussion
 * Cart - Static today 
 * Cart - Add & Remove from basket should be done from VUEX. Inspiration -> http://www.voerro.com/en/tutorials/r/simple-persistent-shopping-cart-implementation-with-vuejs-2-and-vuex-in-laravel-5/2
 * UX Suggetsion -> When cart is open, it should be possible to edits the products directly in that view , + - and remove.
+* Body scroll, when opening cart products wrapper / body loses its position and scrolls to top.  https://vuejsexamples.com/vue-directive-to-lock-the-body-scroll-without-stopping-the-target-element-from-scrolling/
 
 ### CHECKOUT
 
