@@ -244,8 +244,13 @@
 
 	&.-msg {
 		
+		border-radius: 6px;
 		color: $black;
 		background-color: $yellow!important;
+		margin:16px 8px 8px;
+		width: auto;
+		display: block;
+		overflow: hidden;
 
 		.text {
 			font-size: 16px;

@@ -1,0 +1,212 @@
+// CART ITEMS
+
+.ps-cart-items {
+
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 99;
+	display: block;
+	padding: 0;
+	padding: 80px 16px 76px;
+	transform: translateY(100%);
+	transition: all .375s ease-out;
+	.-open-cart & {
+		transform: translateY(0)
+	}
+
+
+	.ps-btn {
+		&.-cart-close {
+			position: absolute;
+			top: 8px;
+    		right: 0px;
+		}
+	}
+
+	.ps-mandatory {
+
+	    background-color: #b03c33;
+	    font-size: 12px;
+	    color: #ffffff;
+	    padding: 7px 8px 7px 32px;
+	    line-height: 1;
+	    border-radius: 8px;
+	    margin: 0 auto -6px;
+	    display: inline-block;
+	    position: relative;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    bottom: -35px; 
+	    z-index: 2;
+	    opacity: 1;
+	    transition: all .225s ease-out;
+
+	    &.-done {
+	    	opacity: 0;
+	    }
+
+		svg {
+			position: absolute;
+			left: 11px;
+			top: 50%;
+			transform: translateY(-50%);
+			fill: $white;
+			height: 14px;
+			width: 14px;
+		}
+
+	}
+
+	.cart-header {
+		display: flex;
+		justify-content: center;
+		padding: 4px 16px 8px;
+		
+		.ps-btn {
+			margin: 0;
+
+
+		}
+		.-mode-dark &{
+			color: $white;
+		}
+	}
+
+	.cart-scroll {
+		overflow: scroll;
+	}
+
+	.ps-btn {
+			margin: 0;
+
+			&.-to-pay {
+				margin: 32px auto 24px;
+				display: block;
+			}
+
+		}
+		
+	.ps-forms {
+		position: relative;
+		margin-top: -8px;
+		padding: 16px 16px 16px;
+	}
+	
+	.cart-items-tip {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		a {
+			margin-bottom: 0;
+		}
+	}
+
+	.cart-items-choices {
+		overflow: hidden;
+	}
+
+	p{
+		a {
+			color: $black;
+		}
+	}
+
+	////
+
+	.products {
+		&.-interactive {
+			.row {
+				margin: 0 -16px 8px;
+				padding-bottom: 8px;
+				align-items: center;
+				border-bottom: 1px solid $gray-200;
+				&:last-child {
+					border: 0;
+				}
+			}
+			.name {
+				flex-grow: 1;
+				padding: 0 4px 0 10px;
+			}
+			.price {
+				width: 80px;
+				text-align: right;
+				white-space: nowrap;
+			}
+			.quantity {
+				width: 64px;
+				// position: absolute;
+				right: -8px;
+				top: -2px;
+				display: flex;
+				align-items: center;
+
+				.ps-btn {
+					margin: 0;
+				}
+
+				.sum {
+					//position: relative;
+					//top: 0px;
+					font-size: 15px;
+					display: inline-block;
+					padding: 0 8px;
+					font-weight: bold;
+					line-height: 1;
+					color: $black;
+				}
+
+			}
+			.-total {
+				border-bottom: none;
+			}
+
+		}
+
+
+		.-int {
+			margin-left: -16px;
+			margin-right: -16px;
+			.left {
+				// padding-left: 74px
+			}
+		}
+
+		@include VP480 {
+
+			&.-interactive {
+				.row {
+					margin: 0 0px 6px;
+				}
+				.name {
+					padding: 0 6px 0 12px;
+				}
+				.price {
+					width: 90px;
+					text-align: right;
+					white-space: nowrap;
+				}
+				.quantity {
+					width: 74px;
+			
+
+				}
+
+
+			}
+			.-int {
+				margin-left: 0px;
+				margin-right: 0px;
+				.left {
+					// padding-left: 86px
+				}
+			}
+		}
+
+	}
+
+}

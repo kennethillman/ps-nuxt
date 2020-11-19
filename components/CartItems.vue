@@ -10,6 +10,9 @@
       
     <div class="ps-forms ps-the-box-text-black " id="cartContent">
 
+
+          <a class="ps-btn -round -cart-close" @click="showHideCart()"><svg-icon name="cross" /></a>
+
         <!-- COUPON -->
 
         <!--     
@@ -228,10 +231,15 @@
           this.scrollAreaHeight = cartContent
         }
 
-        
-
-
-
+      },
+      showHideCart(){
+        if(!this.$store.getters.getCartDisabled){
+          if (this.$store.getters.getCartOpen){
+            this.$store.dispatch("setCartOpen", false);  
+          } else {
+            this.$store.dispatch("setCartOpen", true); 
+          }
+        }
       },
       eatingSpot(){
 

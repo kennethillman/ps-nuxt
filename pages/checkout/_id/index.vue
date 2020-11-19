@@ -8,7 +8,7 @@
   </div>
 
 
-  <h1>3.Betala - {{this.$store.getters.getCartTotal}}  SEK</h1>
+  <h1>3. Välj betalsätt - {{this.$store.getters.getCartTotal}}  SEK</h1>
 
   <div class="ps-items">
 
@@ -20,8 +20,10 @@
   </div>
 
 
-<!-- <h1>Checkout</h1>
- {{checkout}} -->
+<!-- 
+  <h1>Checkout</h1>
+  {{checkout}} 
+-->
 
 
 </div>
