@@ -3,9 +3,12 @@
 
   <div class="ps-info -even">
 
+
+
     <InfoThanks />
     <InfoReceipt />
     <InfoPlace :location="location" /> 
+    <InfoMsg />
  
   </div>
 
