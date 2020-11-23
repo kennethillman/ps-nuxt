@@ -1,0 +1,192 @@
+//
+// START/HOME - PAGE
+// 
+
+.ps-docs {
+
+
+
+	.doc-header	{
+		transform: scale(1.2);
+		&.-small {
+			transform: scale(.9);
+		}
+		span {
+			display: block;
+			font-size: 24px;
+		}
+	}
+
+	.doc-row {
+		display: flex;
+		flex-direction: row;
+  		flex-wrap: wrap;
+
+  		&.-center {
+  			justify-content: center;
+  			.doc-col{
+  				max-width: 600px;
+  				text-align: center;
+  				margin-bottom: 32px;
+  			}
+  		}
+
+	}
+
+	.doc-col {
+		//background: #f0f0f0;
+
+		display: flex;
+  		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		margin: 0 8px;
+		justify-content: center;
+
+
+
+
+
+		.header {
+
+		}
+
+	}
+
+	.doc-body{
+		position: relative;
+		padding: 90px 0 16px;
+		&.-bg-skin-start {
+			background: var(--ps-skin-start-bg);
+		}
+
+		&.-bg {
+			background-size: cover;
+			background-position: center center;
+			max-height: 400px;
+			height: 90vh;
+			width: 100%;
+
+			h1{
+				position: relative;
+				z-index: 2;
+			}
+
+			&.-overlay {
+				position: relative;
+				&:before {
+					content: "";
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					background-color: var(--ps-skin);
+					top: 0;
+					left: 0;
+					z-index: 0;
+					opacity: .78;
+				}
+
+			}
+
+			&.-mode-dark {
+				color: $white;
+
+				&.-overlay {
+				 &:before {
+	
+					background-color: var(--ps-skin);
+	
+				}
+					
+				}
+			}
+
+		}
+	}	
+
+	.-mode-dark {
+
+		&.doc-body {
+			background-color: var(--ps-skin);	
+		}
+	}
+
+	.-skin-olearys {
+
+		&.doc-body {
+			background-color: var(--ps-skin);
+		}
+	}
+
+	.-skin-turbo {
+
+		&.doc-body {
+			background-color: var(--ps-skin);	
+		}
+	}
+
+	.-mode {
+		width: 100%;
+
+		.ps-header {
+			position: absolute;
+			width: 100%;
+		} 
+
+
+
+		.-bg-skin {
+			background: var(--ps-skin-bg);
+		}
+	}
+
+	.-text {
+		display: block;
+	}
+
+	.-logos {	
+		display: flex;
+		justify-content: space-between;
+		figure {
+			border-radius: 100px;
+			overflow: hidden;
+			width: 31%;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+			&.-olearys {
+				background-color: #2b9c86;
+			}
+		}
+		img{
+			display: block;
+
+		}
+	}
+
+	.-code {
+		max-width: 100%;
+		overflow: scroll;
+		pre {
+			font-size: 14px;
+		    padding: 16px;
+		    border-radius: 8px;
+		    background: #f3f3f3;
+
+		}
+	}
+
+	.-usp {
+		ul {
+			display: block;
+		}
+		.text {
+			span {
+				display: block;
+				font-size: 14px;
+				font-weight: normal;
+			}
+		}
+	}
+
+
+	
+}

@@ -80,3 +80,21 @@ body {
 }
 
 
+.-text-green {
+  color: $green;
+}
+
+.-text-red {
+  color: $red;
+}
+
+.-fill-red {
+  fill: $red !important;
+}
+
+.-fill-green {
+  fill: $green !important ;
+}
+
+
+
